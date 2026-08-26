@@ -2,9 +2,9 @@
 
 _This project is to be done in teams of 2._
 
-**Gal Alon**
+**Gal Alon and Jonathan Sharpy**
 
-**THE MASTERWORK YOU DREW FROM THE HAT: Nanoleaf Panels**
+**THE MASTERWORK YOU DREW FROM THE HAT: Light-Up Sneakers**
 
 ---
 
