@@ -107,10 +107,10 @@ For your masterwork, reconstruct the interaction as a scene:
 
 **Describe your setting, players, activity, and goals here.**
 
-**Setting: Sidewalk at midway**
-**Players: The user and viewer(s)**
-**Activity: User steps and person pointing at the light** 
-**Goals: The user is walking and drawing attention and the viewer is supplying the attention/analyzing the device.**
+-**Setting: Sidewalk at midway**
+-**Players: The user and viewer(s)**
+-**Activity: User steps and person pointing at the light** 
+-**Goals: The user is walking and drawing attention and the viewer is supplying the attention/analyzing the device.**
 
 Now **sketch a 3 storyboards** of the interaction you are recreating. (The number may depend on the thing you drew, but stretch your thinking!) They
 don't need to be beautiful, but they must capture and communicate not only the behavior of the light, but how it affects
