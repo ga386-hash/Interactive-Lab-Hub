@@ -90,7 +90,7 @@ the interaction*:
   Sometimes the details of how the interaction worked are lost in history. Try filling it in with your imagination!
 
 **Describe your masterwork here, in your own words. What is the core interaction
-someone would recognize it by?**
+someone would recognize it by? Light-up sneakers are a unique combination of everyday wear and tech that creates a display for others' attention. Every step emits a hue from the heel of the shoe, changing in frequency and brightness based on the pressure or speed of walking. The core interaction of this device is generating light from stepping down.**
 
 ## Part A. Plan
 
