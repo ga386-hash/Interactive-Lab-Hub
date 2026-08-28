@@ -1,4 +1,3 @@
-<img width="776" height="479" alt="Storyboard" src="https://github.com/user-attachments/assets/0196ce23-f97d-41f7-809f-afe77b1501db" />
 # Recreating the Masters of Interactive Light
 
 _This project is to be done in teams of 2._
