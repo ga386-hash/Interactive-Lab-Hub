@@ -1,3 +1,4 @@
+<img width="776" height="479" alt="Storyboard" src="https://github.com/user-attachments/assets/0196ce23-f97d-41f7-809f-afe77b1501db" />
 # Recreating the Masters of Interactive Light
 
 _This project is to be done in teams of 2._
@@ -117,7 +118,7 @@ don't need to be beautiful, but they must capture and communicate not only the b
 and the people around it. If you're new to storyboarding, read
 [this explanation](https://www.nngroup.com/articles/storyboards-visualize-ideas/).
 
-**Include pictures of your storyboards here.**
+**<img width="776" height="479" alt="Storyboard" src="https://github.com/user-attachments/assets/e7173f63-f009-4c61-bd67-019d82843c49" />**
 
 Use the storyboards to decide what interaction to prototype.
 
