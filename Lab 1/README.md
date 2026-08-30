@@ -181,7 +181,11 @@ and calm for a bedroom?
 the top of this lab: a viewer who knows the piece should recognize it; a viewer
 who doesn't should come away understanding what it's famous for. How might you illustrate the non-sequential aspects of the interaction in the sketch?
 
-**Include your video here.**
+**
+
+https://github.com/user-attachments/assets/fdc5fc9a-4f2f-411c-823b-2ac94ce1af51
+
+**
 
 **Please indicate who you collaborated with on this lab.** Be generous in
 acknowledging their contributions, and credit any other influences (YouTube,
