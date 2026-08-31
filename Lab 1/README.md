@@ -168,7 +168,14 @@ another acts with it — this is how you make the device feel alive without
 building any real electronics. (Zoom works well for recording; you can pin the
 video feed of whichever scene you want to capture.)
 
-**Include your first attempts at recording the wizarded set-up here.**
+**Include your first attempts at recording the wizarded set-up here:**
+
+https://github.com/user-attachments/assets/a1a37e4a-c9b7-4b17-9012-9d8f09aeb1f7
+
+https://github.com/user-attachments/assets/03b3fb98-01d9-46d8-8b55-dc6ba3c51801
+
+https://github.com/user-attachments/assets/bca2d2ec-006c-4c6e-b527-0ff86863f4d3
+
 
 ## Part E. (optional) Costume the Device
 
