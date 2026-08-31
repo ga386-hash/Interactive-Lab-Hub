@@ -93,6 +93,11 @@ the interaction*:
 someone would recognize it by?** 
 
 **Light-up sneakers are a unique combination of everyday wear and tech that creates a display for others' attention. Every step emits a hue from the heel of the shoe, changing in frequency and brightness based on the pressure or speed of walking. The core interaction of this device is generating light from stepping down.**
+**The main input of the light-up sneakers is the pressure of your foot when you step down. Since there are various iterations of the light-up shoe design, we focused on the masterwork developed in the 1990s by L.A. Lights, which simply light up red when the shoe hits the ground. For the response, there are different results based on how hard and how fast you step. For example, a stomp would produce the brightest reaction while a soft step barely lights it.**
+
+**The user who wears the shoe and anyone in the vicinity of its display would be the viewers present. The piece creates a relationship where the user draws attention to their shoes and turns the process of walking into something theatrical.**
+
+**Light-up sneakers are famous as being one of the first pieces of “wearable tech” in the shoe industry. Its primary strength is the simplicity of the design; it doesn’t require any time to learn how to use, nor excessive buttons or other components to control it. On the other hand, the shoes lack sufficient power for extended use, are an experimental look and not formal attire, and can malfunction by getting stuck “on” or displaying incorrect colors.**
 
 ## Part A. Plan
 
