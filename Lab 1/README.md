@@ -140,6 +140,10 @@ Physically act out the interaction you planned. For now, just pretend the light
 is doing what you've scripted — a person can wave a flashlight, or you can narrate
 it aloud.
 
+https://github.com/user-attachments/assets/d389c317-c244-4558-bee7-0573b555b039
+
+
+
 **Are there things that seemed better on paper than when acted out?**
 
 **It's actually hard to picture how you'd fit a light onto a shoe in a way that doesn't get in the way of walking. The rhythm isn't as clean as the storyboard makes it look either, since walking speed changes how the flashes come, so it's not just one flash per step like I drew. Also, the light from the phone is really only visible from certain angles, so someone standing behind you might not even see it light up.**
