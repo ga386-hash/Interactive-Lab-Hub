@@ -130,10 +130,16 @@ is doing what you've scripted — a person can wave a flashlight, or you can nar
 it aloud.
 
 **Are there things that seemed better on paper than when acted out?**
+****
+
+
 
 **Did new ideas about the piece surface once you were on your feet?**
+**Yes. Walking around, I noticed the light isn't just one flash per step, it's tied to a rhythm. Walking slow gives a slow, spaced-out flash pattern, while walking fast or running makes the flashes come quicker. That rhythm is part of what actually draws attention, not just the light itself.**
 
 **Are there key moments in the interaction where things could go in a different direction?**
+**The shoe doesn't always turn on when you take a soft step, so sometimes it lights up right away and sometimes you have to stomp again to make it work. Also, a person watching might notice the light right away, or they might not notice for a while, so it can feel like a big deal or go completely unnoticed. And the same light looks totally different depending on when it happens, in the daytime it can be hard to even see, but at night it's bright and hard to miss.**
+
 Iterate your storyboards to capture key non-sequential aspects of the interaction. 
 
 ## Part C. Prototype the Light (light first!)
@@ -187,9 +193,7 @@ https://github.com/user-attachments/assets/fdc5fc9a-4f2f-411c-823b-2ac94ce1af51
 
 
 
-**Please indicate who you collaborated with on this lab.** Be generous in
-acknowledging their contributions, and credit any other influences (YouTube,
-Github, Twitter, a friend who lent you a lamp) that informed your recreation.
+**Jonathan Sharpy and I worked on everything together. For the video, I was the one clicking on the tinkerbelle tool while he was in the video.**
 
 ---
 
