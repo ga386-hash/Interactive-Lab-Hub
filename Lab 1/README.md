@@ -132,7 +132,7 @@ and the people around it. If you're new to storyboarding, read
 
 Use the storyboards to decide what interaction to prototype.
 
-**Summarize the feedback you got here.**
+**Summarize the feedback you got here: Looking at my 3 storyboards helped me see the light-up sneakers from a few different angles. The first one made it clear the light is also for the people around me, not just for me. The second one, where I jump, showed that harder impact makes the light brighter, which wasn't obvious from just walking. And the third one, at night with a dog, showed a real use for the light beyond just looking cool, like helping me spot things in the dark. Overall, the interaction made more sense to me once I thought through different situations, not just one normal walk. I picked the first storyboard because it shows the simplest, most everyday version of the interaction.**
 
 ## Part B. Act out the Interaction
 
