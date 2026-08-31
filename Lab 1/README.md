@@ -125,6 +125,11 @@ and the people around it. If you're new to storyboarding, read
 
 **<img width="776" height="479" alt="Storyboard" src="https://github.com/user-attachments/assets/e7173f63-f009-4c61-bd67-019d82843c49" />**
 
+**<img width="620" height="392" alt="Screenshot 2026-08-31 at 1 29 07 PM" src="https://github.com/user-attachments/assets/1fbcd5b1-3b52-4817-b409-b749bfb48fa4" />**
+
+**<img width="618" height="362" alt="Screenshot 2026-08-31 at 1 29 17 PM" src="https://github.com/user-attachments/assets/0ea051b0-bd26-4742-bd80-cd3a94a8c513" />**
+
+
 Use the storyboards to decide what interaction to prototype.
 
 **Summarize the feedback you got here.**
