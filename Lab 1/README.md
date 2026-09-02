@@ -236,7 +236,7 @@ wasn't clear.
 **Who were the other groups you kibitzed with? Add links to their project pages here.**
 **Summarize the feedback you got from your partners here:**
 
-**Group 1: Project link: Feedback:**
+**Group 1(Brake & Turn Signals): Xiaoxi Xu Project link:https://github.com/xuxx21/Interactive-Lab-Hub/tree/Fall2026/Lab%201 Feedback:**
 **Group 2: Project link: Feedback:**
 **Group 3: Project link: Feedback:**
 
