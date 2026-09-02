@@ -234,7 +234,11 @@ guess the masterwork and the goals of the characters, and ask about anything tha
 wasn't clear.
 
 **Who were the other groups you kibitzed with? Add links to their project pages here.**
-**Summarize the feedback you got from your partners here.**
+**Summarize the feedback you got from your partners here:**
+
+**Group 1: Project link: Feedback:**
+**Group 2: Project link: Feedback:**
+**Group 3: Project link: Feedback:**
 
 ## Remix, Update, or Critique the Master
 
