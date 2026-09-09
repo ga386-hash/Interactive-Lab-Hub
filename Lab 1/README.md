@@ -266,8 +266,22 @@ combine them):
 We will grade this second pass with an emphasis on **creativity** and on how well
 your response engages with what your master was really doing.
 
-**Document everything here — especially the storyboard and video. Photos of the
-prototype are great too.**
+
+**Link to final video: https://drive.google.com/file/d/1xEiTSDxt539XHi81iL_ocNt49AjV0abv/view?usp=sharing**
+
+**We used feedback from three peer groups to fix a weakness in our light-up sneaker interaction: the brightness change from footstep pressure was not easy enough to see. To fix this, we changed the color scheme in Tinkerbelle from a full rainbow of swatches to a black-to-red gradient, which better matches the actual red LED heel light. We changed the code so the light could be controlled with keyboard shortcuts instead of clicking the color picker, letting us trigger color changes quickly and quietly while filming. For the physical setup, we used cardboard covering most of the phone screen, showing only about half the display to represent the light being placed at the heel instead of the whole shoe. For the recorded sequence, we added more steps overall, including rocking back on our heels twice to slowly build up brightness to about half the maximum, then jumping and landing with a sharp spike to full brightness to show the impact. These changes were meant to make the connection between footstep pressure and brightness easier to see on camera, directly answering the feedback all three peer groups gave us.**
+
+<img width="1558" height="1830" alt="IMG_1680" src="https://github.com/user-attachments/assets/0643c6e2-88d1-44d3-8b9f-5eb654209785" />
+
+**We made two changes to Tinkerbelle's static/index.js to get better control over the light. First, we replaced the default rainbow color swatches with a black-to-red gradient (rgba(0,0,0,1) through rgba(255,0,0,1) in six steps). Each rgba value has four numbers: the first three set the red, green, and blue amounts on a scale of 0 to 255, and the fourth sets opacity from 0 (fully transparent) to 1 (fully solid). For our gradient, only the red value changes across the six steps, from 0 up to 255, while green and blue stay at 0, so the color moves from black to full red instead of cycling through different hues.**
+
+<img width="219" height="156" alt="Screenshot 2026-09-08 at 9 47 30 PM" src="https://github.com/user-attachments/assets/64144619-7a3b-4b91-b4a8-18fdc404f01f" />
+
+**We also added a keyboard shortcut so the light could be controlled without clicking through the interface while filming: pressing "a" turns the light black and "s" turns it red, and both are sent through the existing socket connection so the phone updates right away. This lets us control the light quickly and quietly during filming, keeping the light's timing matched to the actor's footsteps without any visible clicking on the controller.**
+
+<img width="312" height="207" alt="Screenshot 2026-09-08 at 9 47 57 PM" src="https://github.com/user-attachments/assets/1c58c428-dd57-4df8-bb6f-9a94930d3189" />
+
+
 
 ---
 
