@@ -237,7 +237,15 @@ Start small, pick just one element of your overall idea, just to show you have a
 
 ## Make a short video of your modified barebones PiClock
 
-\*\*\***Take a video of your barely modified PiClock.**\*\*\*
+
+
+https://github.com/user-attachments/assets/ad90fe72-c60e-43e1-a27f-3ab45b743e9e
+
+
+\*\*\***For this demo, I adjusted the fill rate of my water accumulation clock so the effect would be visible in a short clip rather than unfolding over a full day. Instead of calculating the water level from the actual hour and minute, I tracked elapsed time since the script started and mapped that onto the screen's height over a 30 second window, so the blue "water" rises from empty to completely full in half a minute. This let me demonstrate the core visual concept, an ambient water level that fills as time passes, in a quick, shareable clip, while the underlying logic is the same proportional-fill approach that would eventually run across a full 24 hour cycle in the finished version.**\*\*\*
+
+<img width="565" height="363" alt="Screenshot 2026-09-14 at 7 12 51 PM" src="https://github.com/user-attachments/assets/71714780-f052-4aaa-9209-a2166962335c" />
+
 
 After you edit and work on the scripts for Lab 2, the files should be upload back to your own GitHub repo! You can push to your personal github repo by adding the files here, commiting and pushing.
 
