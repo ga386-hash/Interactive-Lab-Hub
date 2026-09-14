@@ -162,6 +162,7 @@ You can look in `image.py` for an example of how to display an image on the scre
 <img width="4284" height="5712" alt="IMG_0441" src="https://github.com/user-attachments/assets/0164261e-5389-4b68-9389-1bf805c7979b" />
 
 
+
 <img width="4284" height="5712" alt="IMG_0442" src="https://github.com/user-attachments/assets/61983282-99d1-4eae-bd0b-699e57b1a56a" />
 
 
@@ -204,6 +205,8 @@ We strongly discourage literal digital or analog clock display: Be creative.
 **Ideas: **
 
 <img width="782" height="381" alt="Screenshot 2026-09-14 at 5 42 29 PM" src="https://github.com/user-attachments/assets/bfa96606-0733-413b-9a17-fe9c05ed02a6" />
+
+
 
 
 <img width="1004" height="400" alt="Screenshot 2026-09-14 at 5 36 39 PM" src="https://github.com/user-attachments/assets/4bfc1711-140c-47e0-bde0-02607ed4401e" />
