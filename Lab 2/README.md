@@ -231,7 +231,9 @@ We strongly discourage literal digital or analog clock display: Be creative.
 
 Start small, pick just one element of your overall idea, just to show you have a handle on the code and components.
 
-\*\*\***Put a copy of your code in your Lab 2 Github repo.**\*\*\*
+**For Part 2, I extended the barebones clock with a small piece of my "water accumulation" concept: a blue rectangle that grows from the bottom of the screen as the day progresses, representing time as something that steadily fills up rather than a set of numbers ticking by. I calculated the current minute-of-day (hours times 60 plus minutes) and mapped it to a proportional height on the display, then layered the existing digital time text on top so both are visible at once. This is just the first building block of the full idea, where water droplets would periodically fall from the top of the screen and accumulate with a rippling effect at the bottom, gradually filling the display over the course of a full day to visualize the passage of time in a more ambient, ongoing way.**
+
+\*\*\***<img width="564" height="361" alt="Screenshot 2026-09-14 at 7 02 38 PM" src="https://github.com/user-attachments/assets/ca10e289-3728-48e5-93b7-b487b540eeb9" />**\*\*\*
 
 ## Make a short video of your modified barebones PiClock
 
