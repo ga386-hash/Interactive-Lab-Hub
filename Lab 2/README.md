@@ -212,7 +212,11 @@ We strongly discourage literal digital or analog clock display: Be creative.
 <img width="1004" height="400" alt="Screenshot 2026-09-14 at 5 36 39 PM" src="https://github.com/user-attachments/assets/4bfc1711-140c-47e0-bde0-02607ed4401e" />
 
 
-**Put the names of the people you gave feedback to here. (Even better, add links to their repos here!)**
+**Jonathan Sharpy: https://github.com/jjs564-gif/Interactive-Lab-Hub/edit/Fall2026/Lab%202/README.md**
+
+**Jerry Lee: https://github.com/JJL4/Interactive-Lab-Hub/tree/Fall2026/Lab%202**
+
+**Stephen Monahan: https://github.com/stephen4513/Interactive-Lab-Hub/blob/Fall2026/Lab%202/README.md**
 
 # Lab 2 Part 2
 
@@ -221,7 +225,12 @@ We strongly discourage literal digital or analog clock display: Be creative.
 1. Pick up remaining parts for kit on Wednesday lab class. Check the updated [parts list inventory](partslist.md) and let the TA know if there is any part missing.
 
 2. Look at and give feedback on the Part E. for at least 3 other people in the class and get 3 people to comment on your Part E!)
-**Put the feedback for your ideas here.**
+
+**Jonathan: I think it's clever to have a time telling device that revolves around important events that you have throughout the day, week, or month. It keeps you aware of the major tasks or goals that you have going on in your life, and at the same time keeps you in countdown mode so you never miss a deadline.**
+
+**Stephen: I think using water filling up the screen to represent time passing is a creative idea. Your explanation makes the concept easy to understand, and the planned droplets and ripples would be a nice addition. One suggestion would be to add a draining animation when the clock resets, so the transition back to an empty screen feels smoother.**
+
+**Jerry: I think that this idea is pretty clever as it only gives you the time until the next deadline and then pressing one of the buttons to see other upcoming deadlines and the time left. Also the idea for the screen to fill up as time of the day continues is also pretty clever to represent the time.**
 
 ## Update your Lab Hub
 
