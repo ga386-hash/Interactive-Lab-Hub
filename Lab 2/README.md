@@ -159,6 +159,14 @@ You can look in `image.py` for an example of how to display an image on the scre
 \*\*\***Include a picture of your own Raspberry Pi displaying the piscreen.service with your unique MAC address. Additionally, please provide another picture showing the successful completion of the screen test.**\*\*\*
 
 
+<img width="4284" height="5712" alt="IMG_0441" src="https://github.com/user-attachments/assets/0164261e-5389-4b68-9389-1bf805c7979b" />
+
+
+
+<img width="4284" height="5712" alt="IMG_0442" src="https://github.com/user-attachments/assets/61983282-99d1-4eae-bd0b-699e57b1a56a" />
+
+
+
 ## Part D. 
 ### Set up the Display Clock Demo
 Work on `screen_clock.py`, try to show the time by filling in the while loop (at the bottom of the script where we noted "TODO" for you). You can use the code in `cli_clock.py` and `stats.py` to figure this out.
@@ -194,9 +202,21 @@ We strongly discourage literal digital or analog clock display: Be creative.
 
 ** Insert ideas, sketches, [Verplank diagrams](https://ccrma.stanford.edu/courses/250a-fall-2004/IDSketchbok.pdf)), storyboards for your ideas **
 
+**Ideas: **
+
+<img width="782" height="381" alt="Screenshot 2026-09-14 at 5 42 29 PM" src="https://github.com/user-attachments/assets/bfa96606-0733-413b-9a17-fe9c05ed02a6" />
 
 
-**Put the names of the people you gave feedback to here. (Even better, add links to their repos here!)**
+
+
+<img width="1004" height="400" alt="Screenshot 2026-09-14 at 5 36 39 PM" src="https://github.com/user-attachments/assets/4bfc1711-140c-47e0-bde0-02607ed4401e" />
+
+
+**Jonathan Sharpy: https://github.com/jjs564-gif/Interactive-Lab-Hub/edit/Fall2026/Lab%202/README.md**
+
+**Jerry Lee: https://github.com/JJL4/Interactive-Lab-Hub/tree/Fall2026/Lab%202**
+
+**Stephen Monahan: https://github.com/stephen4513/Interactive-Lab-Hub/blob/Fall2026/Lab%202/README.md**
 
 # Lab 2 Part 2
 
@@ -205,7 +225,12 @@ We strongly discourage literal digital or analog clock display: Be creative.
 1. Pick up remaining parts for kit on Wednesday lab class. Check the updated [parts list inventory](partslist.md) and let the TA know if there is any part missing.
 
 2. Look at and give feedback on the Part E. for at least 3 other people in the class and get 3 people to comment on your Part E!)
-**Put the feedback for your ideas here.**
+
+**Jonathan: I think it's clever to have a time telling device that revolves around important events that you have throughout the day, week, or month. It keeps you aware of the major tasks or goals that you have going on in your life, and at the same time keeps you in countdown mode so you never miss a deadline.**
+
+**Stephen: I think using water filling up the screen to represent time passing is a creative idea. Your explanation makes the concept easy to understand, and the planned droplets and ripples would be a nice addition. One suggestion would be to add a draining animation when the clock resets, so the transition back to an empty screen feels smoother.**
+
+**Jerry: I think that this idea is pretty clever as it only gives you the time until the next deadline and then pressing one of the buttons to see other upcoming deadlines and the time left. Also the idea for the screen to fill up as time of the day continues is also pretty clever to represent the time.**
 
 ## Update your Lab Hub
 
@@ -215,11 +240,21 @@ We strongly discourage literal digital or analog clock display: Be creative.
 
 Start small, pick just one element of your overall idea, just to show you have a handle on the code and components.
 
-\*\*\***Put a copy of your code in your Lab 2 Github repo.**\*\*\*
+**For Part 2, I extended the barebones clock with a small piece of my "water accumulation" concept: a blue rectangle that grows from the bottom of the screen as the day progresses, representing time as something that steadily fills up rather than a set of numbers ticking by. I calculated the current minute-of-day (hours times 60 plus minutes) and mapped it to a proportional height on the display, then layered the existing digital time text on top so both are visible at once. This is just the first building block of the full idea, where water droplets would periodically fall from the top of the screen and accumulate with a rippling effect at the bottom, gradually filling the display over the course of a full day to visualize the passage of time in a more ambient, ongoing way.**
+
+\*\*\***<img width="564" height="361" alt="Screenshot 2026-09-14 at 7 02 38 PM" src="https://github.com/user-attachments/assets/ca10e289-3728-48e5-93b7-b487b540eeb9" />**\*\*\*
 
 ## Make a short video of your modified barebones PiClock
 
-\*\*\***Take a video of your barely modified PiClock.**\*\*\*
+
+
+https://github.com/user-attachments/assets/ad90fe72-c60e-43e1-a27f-3ab45b743e9e
+
+
+\*\*\***For this demo, I adjusted the fill rate of my water accumulation clock so the effect would be visible in a short clip rather than unfolding over a full day. Instead of calculating the water level from the actual hour and minute, I tracked elapsed time since the script started and mapped that onto the screen's height over a 30 second window, so the blue "water" rises from empty to completely full in half a minute. This let me demonstrate the core visual concept, an ambient water level that fills as time passes, in a quick, shareable clip, while the underlying logic is the same proportional-fill approach that would eventually run across a full 24 hour cycle in the finished version.**\*\*\*
+
+<img width="565" height="363" alt="Screenshot 2026-09-14 at 7 12 51 PM" src="https://github.com/user-attachments/assets/71714780-f052-4aaa-9209-a2166962335c" />
+
 
 After you edit and work on the scripts for Lab 2, the files should be upload back to your own GitHub repo! You can push to your personal github repo by adding the files here, commiting and pushing.
 
