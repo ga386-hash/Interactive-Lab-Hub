@@ -207,10 +207,11 @@ We strongly discourage literal digital or analog clock display: Be creative.
 <img width="782" height="381" alt="Screenshot 2026-09-14 at 5 42 29 PM" src="https://github.com/user-attachments/assets/bfa96606-0733-413b-9a17-fe9c05ed02a6" />
 
 
-For my first idea, I sketched a "deadline countdown" concept where the display cycles through upcoming deadlines instead of showing a standard clock. Each press of the physical button moves to the next deadline in the list, such as an assignment, a midterm, or even a personal deadline like a rent payment, and shows how much time is left until it's due. Once the last deadline is reached, pressing the button again loops back to the first one, creating a simple, repeatable cycle. This idea moves away from measuring time in hours and minutes and instead measures it in terms of what actually matters day to day, giving a more personal and useful sense of how time is passing.
+For my first idea, I sketched a "deadline countdown" concept where the display cycles through upcoming deadlines instead of showing a normal clock. Each press of the button moves to the next deadline in the list, such as an assignment, a midterm, or a personal deadline like a rent payment, and shows how much time is left until it's due. Once the last deadline is reached, pressing the button again loops back to the first one, creating a repeatable cycle. This idea moves away from measuring time in hours and minutes and instead measures it in terms of what actually matters day to day, giving a more personal and useful sense of how time is passing.
 
 <img width="1004" height="400" alt="Screenshot 2026-09-14 at 5 36 39 PM" src="https://github.com/user-attachments/assets/4bfc1711-140c-47e0-bde0-02607ed4401e" />
 
+For my second idea, I drew the screen at three different points in the day, 9am, 3pm, and 11pm, where the water level rises and gets choppier as the day goes on. In the morning, the water is low and mostly calm, showing that the day has just started. By the afternoon, the water has risen and the waves are more frequent, showing that things are picking up. By night, the screen is almost completely full and the waves are sharp and jagged, showing how busy or overwhelming the day has become by that point. The idea is to represent not just how much time has passed, but also the feeling of how the day has built up.
 
 
 **Jonathan Sharpy: https://github.com/jjs564-gif/Interactive-Lab-Hub/edit/Fall2026/Lab%202/README.md**
