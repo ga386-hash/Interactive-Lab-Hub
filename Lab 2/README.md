@@ -1,5 +1,6 @@
 # Interactive Prototyping: The Clock of Pi
-**Gal Alon**
+
+**Gal Alon and Jonathan Sharpy**
 
 Does it feel like time is moving strangely during this semester?
 
@@ -211,7 +212,7 @@ For my first idea, I sketched a "deadline countdown" concept where the display c
 
 <img width="1004" height="400" alt="Screenshot 2026-09-14 at 5 36 39 PM" src="https://github.com/user-attachments/assets/4bfc1711-140c-47e0-bde0-02607ed4401e" />
 
-For my second idea, I drew the screen at three different points in the day, 9am, 3pm, and 11pm, where the water level rises and gets choppier as the day goes on. In the morning, the water is low and mostly calm, showing that the day has just started. By the afternoon, the water has risen and the waves are more frequent, showing that things are picking up. By night, the screen is almost completely full and the waves are sharp and jagged, showing how busy or overwhelming the day has become by that point. The idea is to represent not just how much time has passed, but also the feeling of how the day has built up.
+For my second idea, I drew the screen at three different points in the day, 9am, 3pm, and 11pm, where the water level rises and gets choppier as the day goes on. In the morning, the water is low and mostly calm, showing that the day has just started. By the afternoon, the water has risen and the waves are more frequent, showing that things are picking up. By night, the screen is almost completely full and the waves are sharp, showing how busy or overwhelming the day has become by that point. The idea is to represent not just how much time has passed, but also the feeling of how the day has built up.
 
 
 **Jonathan Sharpy: https://github.com/jjs564-gif/Interactive-Lab-Hub/edit/Fall2026/Lab%202/README.md**
