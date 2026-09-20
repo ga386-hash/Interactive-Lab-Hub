@@ -278,6 +278,9 @@ Do take advantage of having done the previous iteration to refine and simplify y
 **For my finished PiClock, I built a water accumulation clock that shows the passing of the day through rising water instead of numbers. Every few seconds, a raindrop falls from a small cloud at the top of the screen and lands in the water below, creating a ripple that spreads out and fades before the water level rises a little higher. The surface of the water moves with a gentle wave pattern instead of sitting flat, so it feels more alive. On the right side of the screen, small hour markers show where 12am, 6am, noon, and other times fall, so the water level actually corresponds to a specific point in the day. Every so often, a shark swims across the screen carrying the exact time in white text, so the current time is still shown.**
 
 
+https://github.com/user-attachments/assets/2de9f7ed-33bf-4e34-bd36-8020931e7a8f
+
+
 \*\*\***Put a copy of your code in your Lab 2 Github repo.**\*\*\*
 
 \*\*\***Take a video of your PiClock.**\*\*\*
