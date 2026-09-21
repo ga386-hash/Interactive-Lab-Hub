@@ -280,6 +280,8 @@ Do take advantage of having done the previous iteration to refine and simplify y
 
 https://github.com/user-attachments/assets/2de9f7ed-33bf-4e34-bd36-8020931e7a8f
 
+**Explanation of iterations: I built my final PiClock by starting with the barebones example and adding one piece at a time to make sure everything worked before moving on. I first got a blue bar to rise and fill the screen over 30 seconds just to test the idea, then switched it so a raindrop actually falls every 5 seconds and the water rises a visible amount each time it lands. After that, I added hour markers along the side of the screen so the water level lines up with an actual time of day, and added a cloud at the top for the raindrop to fall from. I removed the plain digital time text and replaced it with a shark that swims across the screen every 15 seconds carrying the current time with it, so the time is still shown but in a more playful way. I also changed the flat top of the water into a moving wave, and reworked the ripple effect so that when a raindrop lands, several rings spread outward slowly and fade into the water instead of appearing and disappearing too quickly. Each of these changes was tested on the actual hardware before adding the next one, which made it easier to catch mistakes and understand what each part of the code was actually doing.**
+
 
 \*\*\***Put a copy of your code in your Lab 2 Github repo.**\*\*\*
 
