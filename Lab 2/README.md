@@ -288,6 +288,8 @@ https://github.com/user-attachments/assets/2de9f7ed-33bf-4e34-bd36-8020931e7a8f
 
 As always, make sure you document contributions and ideas from others (and AI) explicitly in your writeup.
 
+**I completed Lab 2 Part 2 collaboratively with Jonathan Sharpy. We worked together on selecting and developing the water accumulation clock concept, implementing and testing the design, and producing the final demonstration. We used Claude as an AI assistance tool during coding to help develop, debug, and refine portions of the Python implementation. We reviewed and tested the resulting code on the Raspberry Pi to produce the submitted clock.**
+
 You are permitted (but not required) to work in groups and share a turn in; you are expected to make equal contribution on any group work you do, and N people's group project should look like N times the work of a single person's lab.  Make sure the page for the group turn in is linked to your personal Interactive Lab Hub page. 
 
 
