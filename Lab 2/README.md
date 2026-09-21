@@ -1,6 +1,6 @@
 # Interactive Prototyping: The Clock of Pi
 
-**Gal Alon**
+**Gal Alon and Jonathan Sharpy (For part 2)**
 
 Does it feel like time is moving strangely during this semester?
 
