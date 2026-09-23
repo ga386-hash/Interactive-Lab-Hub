@@ -1,6 +1,6 @@
 # Chatterboxes
 
-**NAMES OF COLLABORATORS HERE**
+**Gal Alon and Jonathan Sharpy**
 
 [![Watch the video](https://user-images.githubusercontent.com/1128669/135009222-111fe522-e6ba-46ad-b6dc-d1633d21129c.png)](https://www.youtube.com/embed/Q8FWzLMobx0?start=19)
 
@@ -110,6 +110,8 @@ The demo script also shows `--output-raw`, which streams audio to the speaker as
 (This shell file should be saved to your own repo for this lab.)
 
 \*\***Then answer: Is the same greeting, in these different voices, the same greeting? Describe one concrete way the voice changed what the utterance seemed to mean or who seemed to be speaking.**\*\*
+
+**No. The words were the same, but each voice changed who it sounded like. Some voices sounded flat and robotic, like a computer alert, and "excited" almost sounded sarcastic because the voice didn't sound excited at all. Others sounded more human but choppy, like a recorded message. The most natural one sounded like a real person, so the same line felt like an actual welcome. My name is a good example. I had to spell it "Gahl" and stretch out the vowel to get the voice to say it right. When a voice says your name wrong, the greeting stops feeling personal.**
 
 ## B. Speech to Text
 
