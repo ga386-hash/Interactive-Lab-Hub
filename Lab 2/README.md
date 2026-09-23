@@ -1,5 +1,6 @@
 # Interactive Prototyping: The Clock of Pi
-**Gal Alon**
+
+**Gal Alon and Jonathan Sharpy (For part 2)**
 
 Does it feel like time is moving strangely during this semester?
 
@@ -207,9 +208,11 @@ We strongly discourage literal digital or analog clock display: Be creative.
 <img width="782" height="381" alt="Screenshot 2026-09-14 at 5 42 29 PM" src="https://github.com/user-attachments/assets/bfa96606-0733-413b-9a17-fe9c05ed02a6" />
 
 
-
+For my first idea, I sketched a "deadline countdown" concept where the display cycles through upcoming deadlines instead of showing a normal clock. Each press of the button moves to the next deadline in the list, such as an assignment, a midterm, or a personal deadline like a rent payment, and shows how much time is left until it's due. Once the last deadline is reached, pressing the button again loops back to the first one, creating a repeatable cycle. This idea moves away from measuring time in hours and minutes and instead measures it in terms of what actually matters day to day, giving a more personal and useful sense of how time is passing.
 
 <img width="1004" height="400" alt="Screenshot 2026-09-14 at 5 36 39 PM" src="https://github.com/user-attachments/assets/4bfc1711-140c-47e0-bde0-02607ed4401e" />
+
+For my second idea, I drew the screen at three different points in the day, 9am, 3pm, and 11pm, where the water level rises and gets choppier as the day goes on. In the morning, the water is low and mostly calm, showing that the day has just started. By the afternoon, the water has risen and the waves are more frequent, showing that things are picking up. By night, the screen is almost completely full and the waves are sharp, showing how busy or overwhelming the day has become by that point. The idea is to represent not just how much time has passed, but also the feeling of how the day has built up.
 
 
 **Jonathan Sharpy: https://github.com/jjs564-gif/Interactive-Lab-Hub/edit/Fall2026/Lab%202/README.md**
@@ -240,7 +243,7 @@ We strongly discourage literal digital or analog clock display: Be creative.
 
 Start small, pick just one element of your overall idea, just to show you have a handle on the code and components.
 
-**For Part 2, I extended the barebones clock with a small piece of my "water accumulation" concept: a blue rectangle that grows from the bottom of the screen as the day progresses, representing time as something that steadily fills up rather than a set of numbers ticking by. I calculated the current minute-of-day (hours times 60 plus minutes) and mapped it to a proportional height on the display, then layered the existing digital time text on top so both are visible at once. This is just the first building block of the full idea, where water droplets would periodically fall from the top of the screen and accumulate with a rippling effect at the bottom, gradually filling the display over the course of a full day to visualize the passage of time in a more ambient, ongoing way.**
+**For Part 2, I started my "water accumulation" concept: a blue rectangle that grows from the bottom of the screen as the day progresses, representing time as something that fills up rather than numbers ticking. I added an existing digital time text on top so both are visible at once. This is just the first small piece of the full idea. Water droplets would fall from the top of the screen every so often and build up at the bottom with a ripple effect each time one lands. Over the course of a full day, the screen would slowly fill up, giving a simple, ongoing way to see time passing without needing to read numbers.**
 
 \*\*\***<img width="564" height="361" alt="Screenshot 2026-09-14 at 7 02 38 PM" src="https://github.com/user-attachments/assets/ca10e289-3728-48e5-93b7-b487b540eeb9" />**\*\*\*
 
@@ -251,7 +254,7 @@ Start small, pick just one element of your overall idea, just to show you have a
 https://github.com/user-attachments/assets/ad90fe72-c60e-43e1-a27f-3ab45b743e9e
 
 
-\*\*\***For this demo, I adjusted the fill rate of my water accumulation clock so the effect would be visible in a short clip rather than unfolding over a full day. Instead of calculating the water level from the actual hour and minute, I tracked elapsed time since the script started and mapped that onto the screen's height over a 30 second window, so the blue "water" rises from empty to completely full in half a minute. This let me demonstrate the core visual concept, an ambient water level that fills as time passes, in a quick, shareable clip, while the underlying logic is the same proportional-fill approach that would eventually run across a full 24 hour cycle in the finished version.**\*\*\*
+\*\*\***For this demo, I sped up how fast the water fills so it would be easy to see in a short video instead of taking a whole day. This let me show the main idea, water slowly filling up as time passes, even though the actual logic is the same one that would run over a full 24 hour day in the finished version.**\*\*\*
 
 <img width="565" height="363" alt="Screenshot 2026-09-14 at 7 12 51 PM" src="https://github.com/user-attachments/assets/71714780-f052-4aaa-9209-a2166962335c" />
 
@@ -272,6 +275,13 @@ Do take advantage of having done the previous iteration to refine and simplify y
 
 ** Insert any updates ideas, sketches, [Verplank diagrams](https://ccrma.stanford.edu/courses/250a-fall-2004/IDSketchbok.pdf))!, storyboards for your ideas **
 
+**I built a water accumulation clock that shows the passing of the day through rising water instead of numbers. Every few seconds, a raindrop falls from a small cloud at the top of the screen and lands in the water below, creating a ripple that spreads out and fades before the water level rises a little higher. The surface of the water moves with a gentle wave pattern instead of sitting flat, so it feels more alive. On the right side of the screen, small hour markers show where 12am, 6am, noon, and other times fall, so the water level actually corresponds to a specific point in the day. Every so often, a shark swims across the screen carrying the exact time in white text, so the current time is still shown.**
+
+
+https://github.com/user-attachments/assets/2de9f7ed-33bf-4e34-bd36-8020931e7a8f
+
+**Explanation of iterations:I started with the barebones example and adding one piece at a time so I could test each change before moving to the next. First, I got a blue bar to rise and fill the screen over 30 seconds using a simple elapsed time calculation, fraction = min(elapsed / 30, 1.0), just to confirm the drawing logic worked. Then I switched to an actual falling raindrop, using a timer to check if 5 seconds had passed, if (now_ts - last_drop_time) >= DROP_INTERVAL, and once a drop landed, I raised the water level by a fixed amount, current_water_height += WATER_RISE_PER_DROP. After that, I added hour markers down the side of the screen by looping through a list of hours and labels and calculating each one's y-position based on height - (hour / 24) * height, so the water level actually lines up with a real time of day. I also added a cloud shape at the top for the raindrop to fall from, and replaced the plain digital time text with a shark that swims across the screen every 15 seconds, calculating its position with shark_x = int(-30 + s_progress * (width + 60)) so it moves smoothly and carries the current time with it. For the water itself, I changed the flat top into a moving wave using math.sin() to offset each point along the surface, and reworked the ripple effect so multiple rings expand slowly and fade into the water's color over time instead of appearing all at once. Testing each of these pieces directly on the Pi before adding the next one made it much easier to catch mistakes and actually understand what each part of the code was doing.**
+
 
 \*\*\***Put a copy of your code in your Lab 2 Github repo.**\*\*\*
 
@@ -279,6 +289,8 @@ Do take advantage of having done the previous iteration to refine and simplify y
 
 
 As always, make sure you document contributions and ideas from others (and AI) explicitly in your writeup.
+
+**I completed Lab 2 Part 2 collaboratively with Jonathan Sharpy. We worked together on selecting and developing the water accumulation clock concept, implementing and testing the design, and producing the final demonstration. We used Claude as an AI assistance tool during coding to help develop, debug, and refine portions of the Python implementation. We reviewed and tested the resulting code on the Raspberry Pi to produce the submitted clock.**
 
 You are permitted (but not required) to work in groups and share a turn in; you are expected to make equal contribution on any group work you do, and N people's group project should look like N times the work of a single person's lab.  Make sure the page for the group turn in is linked to your personal Interactive Lab Hub page. 
 
