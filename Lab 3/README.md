@@ -111,6 +111,8 @@ The demo script also shows `--output-raw`, which streams audio to the speaker as
 
 \*\***Then answer: Is the same greeting, in these different voices, the same greeting? Describe one concrete way the voice changed what the utterance seemed to mean or who seemed to be speaking.**\*\*
 
+**The different speech synthesizers gave the Pi noticeably different personalities. eSpeak sounded very robotic and clearly computer-generated, which made the speech feel more mechanical. Festival was somewhat different, but still had the recognizable qualities of traditional synthesized speech. Piper stood out the most to me because it was much smoother and more human-like. When I used Piper for my custom greeting, “Greetings, Jonathan. How are you doing today?”, the natural pacing and pronunciation made the interaction feel much more conversational. This showed me that the choice of speech synthesizer can significantly affect how a user perceives a device, even when the actual words being spoken are similar or even the same.**
+
 ## B. Speech to Text
 
 We use [faster-whisper](https://github.com/SYSTRAN/faster-whisper), a reimplementation of OpenAI's Whisper model that runs several times faster on CPU and does not require PyTorch. All processing happens on the Pi; nothing is sent to a server.
