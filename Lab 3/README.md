@@ -157,6 +157,12 @@ Speak, pause, and watch it transcribe. Now change the endpointing threshold — 
 
 \*\***Try both extremes, and something in between. Describe what each one feels like to talk to. Note specifically: at 0.2s, what kinds of normal speech get cut off? At 1.5s, what does the delay make the system seem like?**\*\*
 
+**At 0.2 seconds, the endpointing threshold felt too short and caused normal pauses in my speech to be interpreted as the end of my turn. When I said, “I went to the store, and then I came home to finish my homework,” the system divided the sentence into three separate utterances. This made it feel like the system was impatient and could easily interrupt someone who pauses naturally while speaking.**
+
+**At 1.5 seconds, the opposite happened. The system successfully kept my entire sentence together as one utterance, even with pauses, but the longer silence required before recognizing that I was finished made the interaction feel noticeably slower and less responsive.**
+
+**I also tested an intermediate threshold of 0.6 seconds. This kept my entire sentence together while responding more quickly after I stopped speaking. Of the three values, 0.6 seconds felt the most natural for this type of conversational interaction because it allowed normal pauses without introducing as much delay.**
+
 There is no correct value. A system that takes drink orders and a system that listens to someone think out loud want very different thresholds, and the right one depends on what your users are doing with their pauses.
 
 ### The complete loop
