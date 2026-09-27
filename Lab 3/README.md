@@ -133,6 +133,8 @@ Available sizes, smallest first: `tiny.en`, `base.en`, `small.en`, `medium.en`. 
 
 \*\***Record a few seconds of your own speech (`arecord -d 5 -f cd -c 1 -r 16000 test.wav`) and transcribe it with at least two model sizes. Report the real-time factor for each. At what point does the accuracy improvement stop being worth the delay, for a system that has to answer you?**\*\*
 
+**I recorded a five-second sample saying, “My Raspberry Pi is running three speech recognition models today.” The tiny.en model had a real-time factor of 0.20x, base.en had a real-time factor of 0.41x, and small.en had a real-time factor of 1.11x. All three models transcribed this relatively simple sentence correctly, so increasing the model size did not provide a meaningful accuracy improvement for this example. However, the transcription delay increased substantially, especially with small.en. For a conversational system that needs to respond quickly, I would choose tiny.en or base.en for this type of speech because they maintained the necessary accuracy while providing much faster responses. The small.en model would only seem worthwhile if the input were difficult enough for the smaller models to make noticeable errors.**
+
 \*\***Write your own script that verbally asks for a numerical input (a phone number, zipcode, number of pets) and records the answer the respondent provides.**\*\* Numbers are a good stress test — transcription systems make characteristic errors on digit strings, and you will want to know what they are before you design around them.
 
 ## C. Turn-taking: knowing when someone has stopped talking
