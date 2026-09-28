@@ -179,9 +179,18 @@ Storyboard and/or use a Verplank diagram to design a speech-enabled device. (Stu
 
 \*\***Post your storyboard and diagram here.**\*\*
 
+<img width="2668" height="1720" alt="image" src="https://github.com/user-attachments/assets/33b6addc-8996-4e0b-a10f-938e22fc8f77" />
+
+
 Write out what you imagine the dialogue to be. Use cards, post-its, or whatever method helps you develop alternatives or group responses.
 
 \*\***Please describe and document your process.**\*\*
+
+**I designed a voice-enabled workout assistant that allows a user to interact with their workout plan hands-free. I chose this scenario because speech can be especially useful during exercise, when a user may be holding equipment or moving between sets and may not want to interact with a screen.**
+
+**I first mapped out the basic conversation from starting a set through completing it and beginning the next one. I then added branching responses based on whether the user describes the set as easy, good, or hard. These responses allow the assistant to adjust the next set or rest period while keeping the dialogue simple.**
+
+**I also considered the turn-taking behavior from Part C. I used approximately 0.6 seconds of silence as the endpointing threshold because my testing showed that it allowed natural pauses without creating the longer response delay I noticed at 1.5 seconds. The goal was to make the assistant feel responsive without interrupting the user during normal speech.**
 
 Your script should include the pauses. Where does your device wait, and for how long? You now know from Part C that this is a parameter you have to choose, not something that happens for free.
 
