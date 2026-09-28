@@ -208,16 +208,22 @@ Scene 2: Reading the list
 
 User: Hey RasPi, I'm about to head to the grocery store. Can you read me my list?
 [RasPi waits for 0.8s of silence]
+
 RasPi: You have four items.
 [0.5s pause]
+
 RasPi: Milk.
 [0.5s pause]
+
 RasPi: Strawberries.
 [0.5s pause]
+
 RasPi: Two oranges.
 [0.5s pause]
+
 RasPi: Chicken.
 [0.5s pause]
+
 RasPi: That's everything. Have a good trip!
 
 **RasPi waits in two places. First, it waits for 0.8 seconds of silence before deciding the user is done talking. I chose this because in Part C, 0.2 seconds cut me off when I paused to think, and 1.5 seconds made the device feel slow. Second, when reading the list, RasPi pauses 0.5 seconds between items so the user has time to follow along instead of hearing everything at once.**
