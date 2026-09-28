@@ -199,6 +199,7 @@ Your script should include the pauses. Where does your device wait, and for how 
 Find a partner, and *without sharing the script with your partner* try out the dialogue you've designed, where you (as the device designer) act as the device you are designing. Please record this interaction (for example, using Zoom's record feature).
 
 **Video of the acted out interaction**
+
 https://drive.google.com/file/d/1hfbTv0yEHU2LRHh3F0IbNi2G2LUThXWh/view?usp=sharing
 
 
