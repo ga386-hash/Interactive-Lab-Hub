@@ -206,6 +206,8 @@ https://drive.google.com/file/d/1hfbTv0yEHU2LRHh3F0IbNi2G2LUThXWh/view?usp=shari
 
 \*\***Describe if the dialogue seemed different than what you imagined when it was acted out, and how.**\*\*
 
+**Testing the interaction with my sister acting as the gym-goer showed me how many different directions a workout conversation can take. Even though she is not an avid gym-goer and had not seen my planned dialogue beforehand, the interaction naturally stayed close to the core purpose I had imagined for the voice assistant: providing quick, useful guidance about what the user wants to target and how they want to approach the workout, such as choosing weight, reps, or rest time. The act-out showed me that the exact dialogue can vary significantly between users, while the assistant can still maintain the same overall purpose and structure.**
+
 
 ---
 
