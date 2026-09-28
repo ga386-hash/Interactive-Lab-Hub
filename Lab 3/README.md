@@ -234,6 +234,12 @@ Your script should include the pauses. Where does your device wait, and for how 
 
 Find a partner, and *without sharing the script with your partner* try out the dialogue you've designed, where you (as the device designer) act as the device you are designing. Please record this interaction (for example, using Zoom's record feature).
 
+
+
+https://github.com/user-attachments/assets/1cf88b5e-20ed-438a-87e2-6646253e73f7
+
+
+
 \*\***Describe if the dialogue seemed different than what you imagined when it was acted out, and how.**\*\*
 
 ---
