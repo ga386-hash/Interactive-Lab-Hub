@@ -1,6 +1,6 @@
 # Chatterboxes
 
-**NAMES OF COLLABORATORS HERE**
+**Gal Alon and Jonathan Sharpy**
 
 [![Watch the video](https://user-images.githubusercontent.com/1128669/135009222-111fe522-e6ba-46ad-b6dc-d1633d21129c.png)](https://www.youtube.com/embed/Q8FWzLMobx0?start=19)
 
@@ -111,6 +111,8 @@ The demo script also shows `--output-raw`, which streams audio to the speaker as
 
 \*\***Then answer: Is the same greeting, in these different voices, the same greeting? Describe one concrete way the voice changed what the utterance seemed to mean or who seemed to be speaking.**\*\*
 
+**No. The words were the same, but each voice changed who it sounded like. Some voices sounded flat and robotic, like a computer alert, and "excited" almost sounded sarcastic because the voice didn't sound excited at all. Others sounded more human but choppy, like a recorded message. The most natural one sounded like a real person, so the same line felt like an actual welcome. My name is a good example. I had to spell it "Gahl" and stretch out the vowel to get the voice to say it right. When a voice says your name wrong, the greeting stops feeling personal.**
+
 ## B. Speech to Text
 
 We use [faster-whisper](https://github.com/SYSTRAN/faster-whisper), a reimplementation of OpenAI's Whisper model that runs several times faster on CPU and does not require PyTorch. All processing happens on the Pi; nothing is sent to a server.
@@ -131,7 +133,14 @@ Available sizes, smallest first: `tiny.en`, `base.en`, `small.en`, `medium.en`. 
 
 \*\***Record a few seconds of your own speech (`arecord -d 5 -f cd -c 1 -r 16000 test.wav`) and transcribe it with at least two model sizes. Report the real-time factor for each. At what point does the accuracy improvement stop being worth the delay, for a system that has to answer you?**\*\*
 
+**I recorded myself saying "My zip code is 10016" and transcribed it with three model sizes. Tiny had a real-time factor of 0.21x, base was 0.37x, and small was 1.06x. All three got it right, so the bigger models added delay without improving accuracy. Small was even slower than real time, meaning it took longer to transcribe than it took me to say it.**
+
+**For a system that has to answer you, the improvement stops being worth it after base. Tiny and base respond fast enough to feel like a conversation, while small adds a noticeable wait. On my first try, all three models heard "1001" because the recording cut off before I finished. A bigger model couldn't fix that, which shows that timing matters as much as model size.**
+
+
 \*\***Write your own script that verbally asks for a numerical input (a phone number, zipcode, number of pets) and records the answer the respondent provides.**\*\* Numbers are a good stress test — transcription systems make characteristic errors on digit strings, and you will want to know what they are before you design around them.
+
+**I wrote ask_number.sh, which asks "What is your zip code?" out loud, records 5 seconds, and turns the answer into text using base.en. When I said "10016" or "one zero zero one six," it wrote "1 0 0 1 6." The numbers were right, but it added spaces that would need to be removed. When I said "one double-oh one six," it wrote "1,000, 1,6," so the zip code was lost. People often say numbers this way, so a real device should repeat the number back to check it or ask people to say one digit at a time.**
 
 ## C. Turn-taking: knowing when someone has stopped talking
 
