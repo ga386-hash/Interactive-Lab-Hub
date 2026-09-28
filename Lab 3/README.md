@@ -242,6 +242,8 @@ https://github.com/user-attachments/assets/1cf88b5e-20ed-438a-87e2-6646253e73f7
 
 \*\***Describe if the dialogue seemed different than what you imagined when it was acted out, and how.**\*\*
 
+**Yes, the dialogue went differently than I imagined. In my script, the user said short commands like "add milk," but my partner started by explaining the situation ("I need to run to the grocery store") and asked RasPi to take items one at a time. They also gave more detail than I expected, like "five bananas" and "Nespresso capsules, strength eight," and as the device, I ended up asking follow-up questions like "What size milk?" and "What kind of coffee?" that weren't in my script at all. These came after my partner said "Okay, great," which showed they thought they were done, so the questions felt a little late. When reading the list back, I also left out the details they gave, saying "milk" instead of "a gallon of milk." Finally, the pauses were longer than the 0.8 seconds I planned, since it took me a few seconds to think of each response.**
+
 ---
 
 # Lab 3 Part 2
