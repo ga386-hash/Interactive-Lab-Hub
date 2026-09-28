@@ -180,9 +180,47 @@ Storyboard and/or use a Verplank diagram to design a speech-enabled device. (Stu
 
 \*\***Post your storyboard and diagram here.**\*\*
 
+**My device, RasPi, is a voice-controlled grocery list keeper that sits on the kitchen counter. Whenever someone notices they're running low on something, they can say "Hey RasPi, add milk to my grocery list," and it confirms the item was added. Before heading to the store, they can ask RasPi to read their list, and it reads back everything they added. This makes it easy to keep track of groceries hands-free, right when you notice something is missing, so nothing gets forgotten at the store.**
+
+<img width="719" height="280" alt="Screenshot 2026-09-27 at 10 11 20 PM" src="https://github.com/user-attachments/assets/e50832e4-7039-40b9-b59e-941a64d44e94" />
+
+**Dialogue:**
+
 Write out what you imagine the dialogue to be. Use cards, post-its, or whatever method helps you develop alternatives or group responses.
 
-\*\***Please describe and document your process.**\*\*
+**Dialogue:**
+
+Scene 1: Adding items
+
+User: Hey RasPi, add milk to my grocery list.
+[RasPi waits for 0.8s of silence, then responds]
+RasPi: Added milk.
+
+User: Also add... um... strawberries.
+[The "um" pause is shorter than 0.8s, so RasPi keeps listening. After 0.8s of silence, it responds]
+RasPi: Added strawberries.
+
+User: And two oranges and chicken.
+[RasPi waits for 0.8s of silence]
+RasPi: Added two oranges and chicken.
+
+Scene 2: Reading the list
+
+User: Hey RasPi, I'm about to head to the grocery store. Can you read me my list?
+[RasPi waits for 0.8s of silence]
+RasPi: You have four items.
+[0.5s pause]
+RasPi: Milk.
+[0.5s pause]
+RasPi: Strawberries.
+[0.5s pause]
+RasPi: Two oranges.
+[0.5s pause]
+RasPi: Chicken.
+[0.5s pause]
+RasPi: That's everything. Have a good trip!
+
+**RasPi waits in two places. First, it waits for 0.8 seconds of silence before deciding the user is done talking. I chose this because in Part C, 0.2 seconds cut me off when I paused to think, and 1.5 seconds made the device feel slow. Second, when reading the list, RasPi pauses 0.5 seconds between items so the user has time to follow along instead of hearing everything at once.**
 
 Your script should include the pauses. Where does your device wait, and for how long? You now know from Part C that this is a parameter you have to choose, not something that happens for free.
 
@@ -191,7 +229,6 @@ Your script should include the pauses. Where does your device wait, and for how 
 Find a partner, and *without sharing the script with your partner* try out the dialogue you've designed, where you (as the device designer) act as the device you are designing. Please record this interaction (for example, using Zoom's record feature).
 
 \*\***Describe if the dialogue seemed different than what you imagined when it was acted out, and how.**\*\*
-
 
 ---
 
