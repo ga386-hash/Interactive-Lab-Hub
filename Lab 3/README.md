@@ -250,6 +250,8 @@ https://github.com/user-attachments/assets/1cf88b5e-20ed-438a-87e2-6646253e73f7
 
 For Part 2, you will redesign the interaction with the speech-enabled device using the data collected, as well as feedback from part 1.
 
+**For Part 1, my original idea was a voice-controlled grocery list keeper. For Part 2, I am working with Jonathan Sharpy, and we decided to continue with his idea instead, a hands-free workout assistant. We chose this idea because speech is even more useful during a workout than remembering your grocery list, since the user's hands are busy with weights and they can't easily use a screen.**
+
 ## Prep for Part 2
 
 1. What are concrete things that could use improvement in the design of your device? For example: wording, timing, anticipation of misunderstandings.
