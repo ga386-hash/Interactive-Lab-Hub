@@ -157,6 +157,12 @@ Speak, pause, and watch it transcribe. Now change the endpointing threshold — 
 
 \*\***Try both extremes, and something in between. Describe what each one feels like to talk to. Note specifically: at 0.2s, what kinds of normal speech get cut off? At 1.5s, what does the delay make the system seem like?**\*\*
 
+**At 0.2 seconds, the endpointing threshold felt too short and caused normal pauses in my speech to be interpreted as the end of my turn. When I said, “I went to the store, and then I came home to finish my homework,” the system divided the sentence into three separate utterances. This made it feel like the system was impatient and could easily interrupt someone who pauses naturally while speaking.**
+
+**At 1.5 seconds, the opposite happened. The system successfully kept my entire sentence together as one utterance, even with pauses, but the longer silence required before recognizing that I was finished made the interaction feel noticeably slower and less responsive.**
+
+**I also tested an intermediate threshold of 0.6 seconds. This kept my entire sentence together while responding more quickly after I stopped speaking. Of the three values, 0.6 seconds felt the most natural for this type of conversational interaction because it allowed normal pauses without introducing as much delay.**
+
 There is no correct value. A system that takes drink orders and a system that listens to someone think out loud want very different thresholds, and the right one depends on what your users are doing with their pauses.
 
 ### The complete loop
@@ -173,9 +179,18 @@ Storyboard and/or use a Verplank diagram to design a speech-enabled device. (Stu
 
 \*\***Post your storyboard and diagram here.**\*\*
 
+<img width="2668" height="1720" alt="image" src="https://github.com/user-attachments/assets/33b6addc-8996-4e0b-a10f-938e22fc8f77" />
+
+
 Write out what you imagine the dialogue to be. Use cards, post-its, or whatever method helps you develop alternatives or group responses.
 
 \*\***Please describe and document your process.**\*\*
+
+**I designed a voice-enabled workout assistant that allows a user to interact with their workout plan hands-free. I chose this scenario because speech can be especially useful during exercise, when a user may be holding equipment or moving between sets and may not want to interact with a screen.**
+
+**I first mapped out the basic conversation from starting a set through completing it and beginning the next one. I then added branching responses based on whether the user describes the set as easy, good, or hard. These responses allow the assistant to adjust the next set or rest period while keeping the dialogue simple.**
+
+**I also considered the turn-taking behavior from Part C. I used approximately 0.6 seconds of silence as the endpointing threshold because my testing showed that it allowed natural pauses without creating the longer response delay I noticed at 1.5 seconds. The goal was to make the assistant feel responsive without interrupting the user during normal speech.**
 
 Your script should include the pauses. Where does your device wait, and for how long? You now know from Part C that this is a parameter you have to choose, not something that happens for free.
 
@@ -183,7 +198,15 @@ Your script should include the pauses. Where does your device wait, and for how 
 
 Find a partner, and *without sharing the script with your partner* try out the dialogue you've designed, where you (as the device designer) act as the device you are designing. Please record this interaction (for example, using Zoom's record feature).
 
+**Video of the acted out interaction**
+
+https://drive.google.com/file/d/1hfbTv0yEHU2LRHh3F0IbNi2G2LUThXWh/view?usp=sharing
+
+
+
 \*\***Describe if the dialogue seemed different than what you imagined when it was acted out, and how.**\*\*
+
+**Testing the interaction with my sister acting as the gym-goer showed me how many different directions a workout conversation can take. Even though she is not an avid gym-goer and had not seen my planned dialogue beforehand, the interaction naturally stayed close to the core purpose I had imagined for the voice assistant: providing quick, useful guidance about what the user wants to target and how they want to approach the workout, such as choosing weight, reps, or rest time. The act-out showed me that the exact dialogue can vary significantly between users, while the assistant can still maintain the same overall purpose and structure.**
 
 
 ---
