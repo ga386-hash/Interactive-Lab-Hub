@@ -267,18 +267,11 @@ For Part 2, you will redesign the interaction with the speech-enabled device usi
 
 <img width="907" height="358" alt="Screenshot 2026-10-04 at 11 43 53 AM" src="https://github.com/user-attachments/assets/698479db-5329-4a3f-a274-d93023660595" />
 
-4. (optional) Integrate [input devices](inputs.md) in the system
+**How the final system works:**
 
-## Prototype your system
+**VoiceFit runs on the Raspberry Pi and uses a rotary encoder as a push-to-talk control. When the user presses the encoder, the microphone begins listening. Voice activity detection determines when the user has finished speaking, and Whisper transcribes the utterance. The Wizard sees the transcription and selects either a predefined workout response or enters a custom response. Piper then converts the selected response to speech and plays it through the speaker. After VoiceFit finishes speaking, the system waits for the next encoder press before listening again. This prevents VoiceFit's own speech from being captured by the microphone and makes the turn-taking state clear to the user.**
 
-The system should:
-* use the Raspberry Pi
-* use one or more sensors
-* require participants to speak to it
-
-*Document how the system works.*
-
-*Include videos or screencaptures of both the system and the controller.*
+**Video of the working system:**
 
 https://drive.google.com/file/d/1sMzlLxOKq9achnXSk1yWEcoUJuP0DJcC/view?usp=sharing
 
