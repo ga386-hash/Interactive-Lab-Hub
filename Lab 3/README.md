@@ -256,13 +256,13 @@ For Part 2, you will redesign the interaction with the speech-enabled device usi
 
 1. What are concrete things that could use improvement in the design of your device? For example: wording, timing, anticipation of misunderstandings.
 
-One thing to improve is how the device knows a set is finished. Right now it relies on a pause, but the user is silent the whole time they lift, so the device could end the set too early or not at all. Having the user say "done" would be clearer. The timing could also be better. A 0.6 second threshold worked when I tested it calmly, but after a hard set the user may be out of breath and pause mid-sentence, so the device might cut them off. A longer threshold right after a set could help. The device should also expect answers outside "easy, good, or hard," like "kind of tough" or "the last two reps were hard." Finally, gym noise, heavy breathing, and music could trigger the microphone by mistake, so the device should confirm important changes, like a new weight, before moving on.
+**One thing to improve is how the device knows a set is finished. Right now it relies on a pause, but the user is silent the whole time they lift, so the device could end the set too early or not at all. Having the user say "done" would be clearer. The timing could also be better. A 0.6 second threshold worked when I tested it calmly, but after a hard set the user may be out of breath and pause mid-sentence, so the device might cut them off. A longer threshold right after a set could help. The device should also expect answers outside "easy, good, or hard," like "kind of tough" or "the last two reps were hard." Finally, gym noise, heavy breathing, and music could trigger the microphone by mistake, so the device should confirm important changes, like a new weight, before moving on.**
 
 
 2. What are other modes of interaction *beyond speech* that you might also use to clarify how to interact? In particular: how does someone know when the device is listening, and when it is thinking? You have a screen and an LED.
 
-Besides speech, I could also add a rotary encoder. After each set, the user could turn the knob to pick easy, good, or hard and press it to confirm, instead of speaking. This helps when the user is out of breath, the gym is loud, or speech recognition gets it wrong. The screen would show the three options and highlight the current one as the knob turns, so the user knows what they are choosing. 
-3. Make a new storyboard, diagram and/or script based on these reflections.
+**Besides speech, I could also add a rotary encoder. After each set, the user could turn the knob to pick easy, good, or hard and press it to confirm, instead of speaking. This helps when the user is out of breath, the gym is loud, or speech recognition gets it wrong. The screen would show the three options and highlight the current one as the knob turns, so the user knows what they are choosing. 
+3. Make a new storyboard, diagram and/or script based on these reflections.**
 
 <img width="907" height="358" alt="Screenshot 2026-10-04 at 11 43 53 AM" src="https://github.com/user-attachments/assets/698479db-5329-4a3f-a274-d93023660595" />
 
