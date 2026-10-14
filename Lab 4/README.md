@@ -294,6 +294,8 @@ As you develop your Feast Automata concept, consider where the sensor and actuat
 
 **\*\*\*What questions do these sketches raise? What do you need to physically prototype to answer them?\*\*\***
 
+These sketches raise questions about where the sensor should go, how reliable the readings will be, and how well the moving parts will work. In the auto tea steeper, can the color sensor clearly see the tea get darker through a glass mug, or will room light throw off the reading? In the never-soggy cereal feeder, can the distance sensor tell the difference between a full and empty bowl, and will the servo gate drop cereal without jamming? In the hydration nudge coaster, will the servo arm tap the glass hard enough to notice without knocking it over? To answer these questions, we need to build simple cardboard versions of the designs, test different sensor positions and distances, and adjust the servo angles and speeds until the interaction feels clear and reliable.
+
 **\*\*\*Pick one design to prototype and explain why.\*\*\***
 
 Build a cardboard or other low-fidelity physical prototype of your design.
