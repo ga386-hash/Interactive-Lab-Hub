@@ -298,6 +298,10 @@ These sketches raise questions about where the sensor should go, how reliable th
 
 **\*\*\*Pick one design to prototype and explain why.\*\*\***
 
+I chose to prototype the hydration nudge coaster. It solves a real problem, since it is easy to forget to drink water during long study sessions or work days. The design is also simple to build with my kit, using a distance sensor in the coaster to detect the glass, the  screen to show the timer, and a servo arm to tap the glass as a reminder. I can also use the speaker to say “Drink water!” so the reminder is both something you see and hear. Even though the build is simple, it still creates a clear and playful interaction between the person and the device, and it gives me room to add features like escalating taps and a sip counter as I improve it.
+
+
+
 Build a cardboard or other low-fidelity physical prototype of your design.
 
 **\*\*\*Document your rough prototype with photos and/or video.\*\*\***
