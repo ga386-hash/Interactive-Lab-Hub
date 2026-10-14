@@ -304,10 +304,6 @@ I chose to prototype the hydration nudge coaster. It solves a real problem, sinc
 
 **\*\*\*Document your rough prototype with photos and/or video.\*\*\***
 
-<img width="872" height="315" alt="Screenshot 2026-10-14 at 11 40 07 AM" src="https://github.com/user-attachments/assets/68f7a9b8-b306-4819-a47f-7f940823a9a0" />
-<img width="872" height="315" alt="Screenshot 2026-10-14 at 11 40 07 AM" src="https://github.com/user-attachments/assets/6535ed4c-7001-41d0-812c-0a92985aac1b" />
-
-
 
 ## Part 2
 
