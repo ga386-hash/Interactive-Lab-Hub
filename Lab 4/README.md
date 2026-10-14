@@ -305,6 +305,9 @@ I chose to prototype the hydration nudge coaster. It solves a real problem, sinc
 **\*\*\*Document your rough prototype with photos and/or video.\*\*\***
 
 
+https://github.com/user-attachments/assets/231bef70-46da-4cfd-b675-49b6fc7582cc
+
+
 ## Part 2
 
 Following exploration and reflection from Part 1, complete the "looks like," "works like" and "acts like" prototypes for your design, reiterated below.
