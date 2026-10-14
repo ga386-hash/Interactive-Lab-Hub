@@ -294,15 +294,13 @@ As you develop your Feast Automata concept, consider where the sensor and actuat
 
 **\*\*\*What questions do these sketches raise? What do you need to physically prototype to answer them?\*\*\***
 
-These sketches raise questions about where the sensor should go, how reliable the readings will be, and how well the moving parts will work. In the auto tea steeper, can the color sensor clearly see the tea get darker through a glass mug, or will room light throw off the reading? In the never-soggy cereal feeder, can the distance sensor tell the difference between a full and empty bowl, and will the servo gate drop cereal without jamming? In the hydration nudge coaster, will the servo arm tap the glass hard enough to notice without knocking it over? To answer these questions, we need to build simple cardboard versions of the designs, test different sensor positions and distances, and adjust the servo angles and speeds until the interaction feels clear and reliable.
+These sketches made me think about where the sensor should go, how well it will work, and how well the moving parts will work. In the auto tea steeper, I need to check if the color sensor can see the tea get darker through a glass mug and if room light messes up the reading. In the never-soggy cereal feeder, I need to see if the distance sensor can tell a full bowl from an empty one and if the servo gate can drop cereal without getting stuck. In the hydration nudge coaster, I need to make sure the servo arm taps the glass hard enough to notice but not so hard that it knocks it over. To figure this out, I need to build simple cardboard versions, try different sensor spots and distances, and change the servo angles and speeds until everything works well.
+
 
 **\*\*\*Pick one design to prototype and explain why.\*\*\***
 
 I chose to prototype the hydration nudge coaster. It solves a real problem, since it is easy to forget to drink water during long study sessions or work days. The design is also simple to build with my kit, using a distance sensor in the coaster to detect the glass, the  screen to show the timer, and a servo arm to tap the glass as a reminder. I can also use the speaker to say “Drink water!” so the reminder is both something you see and hear. Even though the build is simple, it still creates a clear and playful interaction between the person and the device, and it gives me room to add features like escalating taps and a sip counter as I improve it.
 
-
-
-Build a cardboard or other low-fidelity physical prototype of your design.
 
 **\*\*\*Document your rough prototype with photos and/or video.\*\*\***
 
