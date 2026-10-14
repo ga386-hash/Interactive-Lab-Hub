@@ -290,7 +290,7 @@ As you develop your Feast Automata concept, consider where the sensor and actuat
 
 <img width="673" height="292" alt="Screenshot 2026-10-13 at 10 52 26 PM" src="https://github.com/user-attachments/assets/6817c53b-b5cb-48fc-b11e-9925782e8a44" />
 
-<img width="560" height="459" alt="Screenshot 2026-10-14 at 11 38 37 AM" src="https://github.com/user-attachments/assets/3592473b-d042-4955-b0ee-333b004d9eb4" />
+<img width="872" height="315" alt="Screenshot 2026-10-14 at 11 40 07 AM" src="https://github.com/user-attachments/assets/094981c8-78be-4f99-8ce4-ffb3fb5dcea5" />
 
 **\*\*\*What questions do these sketches raise? What do you need to physically prototype to answer them?\*\*\***
 
@@ -304,7 +304,9 @@ I chose to prototype the hydration nudge coaster. It solves a real problem, sinc
 
 **\*\*\*Document your rough prototype with photos and/or video.\*\*\***
 
-<img width="560" height="459" alt="Screenshot 2026-10-14 at 11 38 37 AM" src="https://github.com/user-attachments/assets/7b0f1fde-29cb-4852-a167-689369085256" />
+<img width="872" height="315" alt="Screenshot 2026-10-14 at 11 40 07 AM" src="https://github.com/user-attachments/assets/68f7a9b8-b306-4819-a47f-7f940823a9a0" />
+<img width="872" height="315" alt="Screenshot 2026-10-14 at 11 40 07 AM" src="https://github.com/user-attachments/assets/6535ed4c-7001-41d0-812c-0a92985aac1b" />
+
 
 
 ## Part 2
