@@ -428,6 +428,6 @@ A person sets their glass on the coaster while they study or work and forgets ab
 
 **Final Interactive Video:** https://drive.google.com/file/d/1BMjYWUDDqvZp8Z3TMxqV-f14SEcyf-VD/view?usp=sharing
 
-**The code**for this prototype is in [hydration_coaster.py](hydration_coaster.py).
+**The code** for this prototype is in [hydration_coaster.py](hydration_coaster.py).
 
 
