@@ -353,7 +353,7 @@ For testing and the demo, the countdown is set to 10 seconds. In real use, it wo
 
 - How does the physical arrangement of the sensor and actuator change the interaction?
 
-**The sensor sits inside the coaster facing up, so the glass has to be centered over it to be detected. The servo arm is mounted next to the coaster at the height of the glass, so it hits the side of the glass instead of the table. If the arm or the glass is too far away, the tap does not reach, so the spacing between them matters a lot.**
+**The sensor sits inside the coaster facing up, so the glass has to be centered over it to be detected. The servo arm is mounted next to the coaster at the height of the bottom of the glass, so it hits the side of the glass instead of the table. If the arm or the glass is too far away, the tap does not reach, so the spacing between them matters a lot.**
   
 - What thresholds, timing, or movement patterns make the interaction feel clear or playful?
 
@@ -363,7 +363,9 @@ For testing and the demo, the countdown is set to 10 seconds. In real use, it wo
 
 **Moving the glass even a little off center lowered the sensor readings, so the hole in the coaster needed to line up with the sensor. Making the servo swing faster made the tap louder and more noticeable, but if it is too fast, the arm does not swing all the way before turning back. Changing the tap angle changed how hard the arm hit the glass, so I tuned it until the tap was clear but did not move the glass.**
 
-Iterate on the sensing, movement, and physical form, and document what you discover.
+
+
+**Reflection: This project showed me that connecting sensing and movement is not just about the code, but also about how the physical parts are placed. The sensor worked well once the glass was centered over it, and the servo needed to be at the right height and distance to actually tap the glass. One challenge was a Qwiic cable that caused the sensor to throw errors, which I fixed by connecting the sensor directly to the Servo pHAT and reseating the cable. It was fun to see the device react on its own and hear it say “Drink water!” for the first time. I was surprised by how much small changes, like the tap speed or the glass position, changed how the interaction felt.**
 
 
 ---
@@ -379,10 +381,18 @@ Document all the prototypes and iterations you have designed and worked on! Agai
 
 ---
 
+**Looks Like**
+
+The device looks like a small coaster with a servo arm standing next to it. The water bottle/glass sits on top of the coaster, right over the distance sensor, and the OLED screen shows the countdown. It is small enough to sit on a desk next to a laptop.
+
+**Works Like**
+
+When a glass is placed on the coaster, the distance sensor detects it and the OLED starts a 10 second countdown. When the countdown reaches zero, the servo arm taps the glass four times and the speaker says “Drink water!” When the glass is lifted, the device resets and shows “Place your glass” again.
 
 
-**Reflection:This project showed me that connecting sensing and movement is not just about the code, but also about how the physical parts are placed. The sensor worked well once the glass was centered over it, and the servo needed to be at the right height and distance to actually tap the glass. One challenge was a Qwiic cable that caused the sensor to throw errors, which I fixed by connecting the sensor directly to the Servo pHAT and reseating the cable. It was fun to see the device react on its own and hear it say “Drink water!” for the first time. I was surprised by how much small changes, like the tap speed or the glass position, changed how the interaction felt.**
+**Acts Like**
 
+A person sets their glass on the coaster while they study or work and forgets about it. When the timer runs out, the tapping sound and the voice get their attention and remind them to take a drink. Picking up the glass to drink resets the device, so the reminder fits into the normal habit of drinking water without needing any buttons or extra steps.
 
 ## Deliverables \& Submission for Lab 4
 
