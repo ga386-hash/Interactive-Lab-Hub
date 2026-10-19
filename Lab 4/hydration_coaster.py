@@ -11,11 +11,11 @@ from PIL import Image, ImageDraw, ImageFont
 
 # Hydration Nudge Coaster
 # 1. OLED says "Place your glass".
-# 2. Put the glass on the coaster and a 20 second countdown starts.
+# 2. Put the glass on the coaster and a 10 second countdown starts.
 # 3. At 0, the servo taps the glass and the speaker says "Drink water!"
 # 4. Lift the glass and it goes back to "Place your glass".
 
-COUNTDOWN_SECONDS = 20
+COUNTDOWN_SECONDS = 10
 
 # Measured: empty ~1-3, glass 1cm above ~5100, glass touching ~21600
 CUP_THRESHOLD = 1000          # above this = glass is on the coaster
