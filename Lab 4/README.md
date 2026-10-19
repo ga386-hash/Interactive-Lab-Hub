@@ -332,6 +332,20 @@ For Part 2, build the Feast Automata interaction you developed in Part D by conn
 - A simple interaction diagram or sketch showing how sensing and actuation are connected
 - Written reflection: What did you learn about connecting sensing, movement, and physical form? What was fun, surprising, or challenging?
 
+**Hydration Nudge Coaster:**
+
+The hydration nudge coaster reminds you to drink water while you study or work. When you place your glass on the coaster, a distance sensor detects it and a 20 second countdown starts on the OLED screen. When the countdown reaches zero, a servo arm taps the glass four times and the speaker says “Drink water!” Lifting the glass resets the device so it is ready for the next round.
+
+For testing and the demo, the countdown is set to 10 seconds. In real use, it would be set to around 20 minutes.
+
+**Parts Used:**
+-Raspberry Pi
+-SparkFun Servo pHAT 
+-SparkFun Qwiic Proximity Sensor 
+-SparkFun Qwiic OLED display 
+-Speaker using espeak for the voice
+-Cardboard, tape, and a pen for the tapping arm
+
 **Questions to consider:**
 - How does your chosen sensor or input shape the physical response?
 
