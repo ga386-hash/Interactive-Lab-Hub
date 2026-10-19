@@ -387,21 +387,30 @@ The device looks like a small coaster with a servo arm standing next to it. The 
 
 <img width="552" height="724" alt="Screenshot 2026-10-19 at 2 54 56 PM" src="https://github.com/user-attachments/assets/4acf91cd-4af8-437b-82b3-dc9cae10ec47" />
 
+**Prototype setup:** a cardboard coaster holds the distance sensor in a cutout at its center so it can detect the glass placed on top. Next to it, a servo taped to the desk swings a pen, which acts as the tapping arm, and both are wired to the Raspberry Pi through the Servo pHAT.
 
 
 **Works Like**
 
 When a glass is placed on the coaster, the distance sensor detects it and the OLED starts a 10 second countdown. When the countdown reaches zero, the servo arm taps the glass four times and the speaker says “Drink water!” When the glass is lifted, the device resets and shows “Place your glass” again.
 
-![Uploading Screenshot 2026-10-19 at 2.55.06 PM.png…]()
+<img width="552" height="631" alt="Screenshot 2026-10-19 at 2 55 06 PM" src="https://github.com/user-attachments/assets/12eb0e33-a979-47f3-8709-1abf482d3288" />
+
+**Prototype in use:** a water bottle sits on the cardboard coaster, right over the distance sensor, which starts the countdown. The servo with the pen arm is taped down next to it so it can swing over and tap the bottle when time runs out, and the speaker on the left says “Drink water!”
 
 
 <img width="468" height="449" alt="Screenshot 2026-10-19 at 2 54 36 PM" src="https://github.com/user-attachments/assets/3e7a0252-7b2c-443c-9961-5545b1436846" />
 
+**Waiting:** The OLED, mounted in the front of the cardboard base, tells the user to place their glass on the coaster.
 
 <img width="512" height="531" alt="Screenshot 2026-10-19 at 2 54 29 PM" src="https://github.com/user-attachments/assets/c42ca180-b9a3-4d23-a462-f8789a577689" />
 
+**Countdown:** Once the glass is detected, the OLED counts down the seconds until the next reminder.
+
 <img width="533" height="543" alt="Screenshot 2026-10-19 at 2 54 24 PM" src="https://github.com/user-attachments/assets/aa26d880-489e-4b49-8d5f-936a4f12ea4f" />
+
+**Reminder: When the countdown hits zero, the OLED shows “Drink water!” while the servo taps the glass and the speaker says the reminder out loud.**
+
 
 
 **Acts Like**
@@ -409,6 +418,6 @@ When a glass is placed on the coaster, the distance sensor detects it and the OL
 A person sets their glass on the coaster while they study or work and forgets about it. When the timer runs out, the tapping sound and the voice get their attention and remind them to take a drink. Picking up the glass to drink resets the device, so the reminder fits into the normal habit of drinking water without needing any buttons or extra steps.
 
 
-Final Interactive Video: https://drive.google.com/file/d/1BMjYWUDDqvZp8Z3TMxqV-f14SEcyf-VD/view?usp=sharing
+**Final Interactive Video:** https://drive.google.com/file/d/1BMjYWUDDqvZp8Z3TMxqV-f14SEcyf-VD/view?usp=sharing
 
 
