@@ -1,4 +1,4 @@
-<img width="552" height="724" alt="Screenshot 2026-10-19 at 2 54 56 PM" src="https://github.com/user-attachments/assets/a4caa3c9-652d-4622-a768-97eed0c0ad66" /><img width="552" height="631" alt="Screenshot 2026-10-19 at 2 55 06 PM" src="https://github.com/user-attachments/assets/fddaed38-2c5b-49c6-902d-6df1de0786ab" /># Ph-UI!!!
+/># Ph-UI!!!
 
 <details>
 	<summary><strong>Instructions for Students (Click to Expand)</strong></summary>
@@ -409,7 +409,7 @@ When a glass is placed on the coaster, the distance sensor detects it and the OL
 
 <img width="533" height="543" alt="Screenshot 2026-10-19 at 2 54 24 PM" src="https://github.com/user-attachments/assets/aa26d880-489e-4b49-8d5f-936a4f12ea4f" />
 
-**Reminder: When the countdown hits zero, the OLED shows “Drink water!” while the servo taps the glass and the speaker says the reminder out loud.**
+**Reminder:** When the countdown hits zero, the OLED shows “Drink water!” while the servo taps the glass and the speaker says the reminder out loud.
 
 
 
