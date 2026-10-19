@@ -1,4 +1,4 @@
-# Ph-UI!!!
+<img width="552" height="724" alt="Screenshot 2026-10-19 at 2 54 56 PM" src="https://github.com/user-attachments/assets/a4caa3c9-652d-4622-a768-97eed0c0ad66" /><img width="552" height="631" alt="Screenshot 2026-10-19 at 2 55 06 PM" src="https://github.com/user-attachments/assets/fddaed38-2c5b-49c6-902d-6df1de0786ab" /># Ph-UI!!!
 
 <details>
 	<summary><strong>Instructions for Students (Click to Expand)</strong></summary>
@@ -385,23 +385,30 @@ Document all the prototypes and iterations you have designed and worked on! Agai
 
 The device looks like a small coaster with a servo arm standing next to it. The water bottle/glass sits on top of the coaster, right over the distance sensor, and the OLED screen shows the countdown. It is small enough to sit on a desk next to a laptop.
 
+<img width="552" height="724" alt="Screenshot 2026-10-19 at 2 54 56 PM" src="https://github.com/user-attachments/assets/4acf91cd-4af8-437b-82b3-dc9cae10ec47" />
+
+
+
 **Works Like**
 
 When a glass is placed on the coaster, the distance sensor detects it and the OLED starts a 10 second countdown. When the countdown reaches zero, the servo arm taps the glass four times and the speaker says “Drink water!” When the glass is lifted, the device resets and shows “Place your glass” again.
+
+![Uploading Screenshot 2026-10-19 at 2.55.06 PM.png…]()
+
+
+<img width="468" height="449" alt="Screenshot 2026-10-19 at 2 54 36 PM" src="https://github.com/user-attachments/assets/3e7a0252-7b2c-443c-9961-5545b1436846" />
+
+
+<img width="512" height="531" alt="Screenshot 2026-10-19 at 2 54 29 PM" src="https://github.com/user-attachments/assets/c42ca180-b9a3-4d23-a462-f8789a577689" />
+
+<img width="533" height="543" alt="Screenshot 2026-10-19 at 2 54 24 PM" src="https://github.com/user-attachments/assets/aa26d880-489e-4b49-8d5f-936a4f12ea4f" />
 
 
 **Acts Like**
 
 A person sets their glass on the coaster while they study or work and forgets about it. When the timer runs out, the tapping sound and the voice get their attention and remind them to take a drink. Picking up the glass to drink resets the device, so the reminder fits into the normal habit of drinking water without needing any buttons or extra steps.
 
-## Deliverables \& Submission for Lab 4
 
-The deliverables for this lab are, writings, sketches, photos, and videos that show what your prototype:
-* "Looks like": shows how the device should look, feel, sit, weigh, etc.
-* "Works like": shows what the device can do.
-* "Acts like": shows how a person would interact with the device.
+Final Interactive Video: https://drive.google.com/file/d/1BMjYWUDDqvZp8Z3TMxqV-f14SEcyf-VD/view?usp=sharing
 
-For submission, the readme.md page for this lab should be edited to include the work you have done:
-* Upload any materials that explain what you did, into your lab 4 repository, and link them in your lab 4 readme.md.
-* Link your Lab 4 readme.md in your main Interactive-Lab-Hub readme.md. 
-* Labs are due on Mondays, make sure to submit your Lab 4 readme.md to Canvas.
+
