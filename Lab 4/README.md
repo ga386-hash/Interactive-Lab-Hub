@@ -335,19 +335,19 @@ For Part 2, build the Feast Automata interaction you developed in Part D by conn
 **Questions to consider:**
 - How does your chosen sensor or input shape the physical response?
 
-The distance sensor only knows if something is close to it, so the whole interaction is built around the glass sitting on the coaster. Because the sensor gives a clear jump in readings when the glass is placed, the device can start the countdown right away and respond with a quick, clear tap.
+**The distance sensor only knows if something is close to it, so the whole interaction is built around the glass sitting on the coaster. Because the sensor gives a clear jump in readings when the glass is placed, the device can start the countdown right away and respond with a quick, clear tap.**
 
 - How does the physical arrangement of the sensor and actuator change the interaction?
 
-The sensor sits inside the coaster facing up, so the glass has to be centered over it to be detected. The servo arm is mounted next to the coaster at the height of the glass, so it hits the side of the glass instead of the table. If the arm or the glass is too far away, the tap does not reach, so the spacing between them matters a lot.
+**The sensor sits inside the coaster facing up, so the glass has to be centered over it to be detected. The servo arm is mounted next to the coaster at the height of the glass, so it hits the side of the glass instead of the table. If the arm or the glass is too far away, the tap does not reach, so the spacing between them matters a lot.**
   
 - What thresholds, timing, or movement patterns make the interaction feel clear or playful?
 
-With nothing on it, the sensor read about 1 to 3. With the glass 1 cm above it, it read about 5,100, and with the glass touching it, about 21,600. A threshold of 1000 made detection reliable. Four quick taps at 0.2 seconds each felt more noticeable and playful than one slow tap, and pairing the taps with the voice made the reminder hard to miss.
+**With nothing on it, the sensor read about 1 to 3. With the glass 1 cm above it, it read about 5,100, and with the glass touching it, about 21,600. A threshold of 1000 made detection reliable. Four quick taps at 0.2 seconds each felt more noticeable and playful than one slow tap, and pairing the taps with the voice made the reminder hard to miss.**
 
 - What changes when you adjust the sensor placement or servo motion?
 
-Moving the glass even a little off center lowered the sensor readings, so the hole in the coaster needed to line up with the sensor. Making the servo swing faster made the tap louder and more noticeable, but if it is too fast, the arm does not swing all the way before turning back. Changing the tap angle changed how hard the arm hit the glass, so I tuned it until the tap was clear but did not move the glass.
+**Moving the glass even a little off center lowered the sensor readings, so the hole in the coaster needed to line up with the sensor. Making the servo swing faster made the tap louder and more noticeable, but if it is too fast, the arm does not swing all the way before turning back. Changing the tap angle changed how hard the arm hit the glass, so I tuned it until the tap was clear but did not move the glass.**
 
 Iterate on the sensing, movement, and physical form, and document what you discover.
 
