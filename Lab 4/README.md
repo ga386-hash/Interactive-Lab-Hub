@@ -380,6 +380,14 @@ Document all the prototypes and iterations you have designed and worked on! Agai
 * "Acts like": shows how a person would interact with the device
 
 ---
+**Interaction diagram: the distance sensor detects the glass, the Raspberry Pi runs a 10 second countdown on the OLED, and when it hits zero the servo taps the glass and the speaker says “Drink water!” Lifting the glass resets the device for the next round.**
+
+<img width="670" height="471" alt="Screenshot 2026-10-19 at 3 03 57 PM" src="https://github.com/user-attachments/assets/17996140-968d-4aa2-9c83-59ffe8640cc0" />
+
+
+
+
+
 
 **Looks Like**
 
