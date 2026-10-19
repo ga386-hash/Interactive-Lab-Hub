@@ -516,6 +516,9 @@ Document all the prototypes and iterations you have designed and worked on! Agai
 
 ---
 
+**This project showed me that connecting sensing and movement is not just about the code, but also about how the physical parts are placed. The sensor worked well once the glass was centered over it, and the servo needed to be at the right height and distance to actually tap the glass. One challenge was a Qwiic cable that caused the sensor to throw errors, which I fixed by connecting the sensor directly to the Servo pHAT and reseating the cable. It was fun to see the device react on its own and hear it say “Drink water!” for the first time. I was surprised by how much small changes, like the tap speed or the glass position, changed how the interaction felt.**
+
+
 ## Deliverables \& Submission for Lab 4
 
 The deliverables for this lab are, writings, sketches, photos, and videos that show what your prototype:
