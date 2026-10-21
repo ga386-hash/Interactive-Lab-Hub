@@ -1,4 +1,4 @@
-# Ph-UI!!!
+Ph-UI!!!
 
 <details>
 	<summary><strong>Instructions for Students (Click to Expand)</strong></summary>
@@ -17,9 +17,9 @@
 ---
 
 ## Lab Overview
-Team: <canvas group name>  
-Members: Full Name (netid, github-handle), ...  
-Clock name: <name>
+Members: Gal Alon (ga386)
+
+Clock name: Hydration Nudge Coaster
 
 
 For lab this week, we focus on both sensing and actuation, bringing new modes of input and output into your devices, while also prototyping the physical structure and overall look of the device. You will consider how the physical form supports sensing and actuation, and how these elements come together to shape the interaction and aesthetics of the device.
@@ -171,8 +171,7 @@ You can go the the [Adafruit GitHub Page](https://github.com/adafruit/Adafruit_C
 
 #### Rotary Encoder 
 
-A rotary encoder is an electro-mechanical device that converts the angular position to analog or digital output signals. The [Adafruit rotary encoder](https://www.adafruit.com/product/4991#technical-details) we ordered for you came with separate breakout board and encoder itself, that is, they will need to be soldered if you have not yet done so! We will be bringing the soldering station to the lab class for you to use, also, you can go to the MakerLAB to do the soldering off-class. Here is some [guidance on soldering](https://learn.adafruit.com/adafruit-guide-excellent-soldering/preparation) from Adafruit. When you first solder, get someone who has done it before (ideally in the MakerLAB environment). It is a good idea to review this material beforehand so you know what to look at.
-
+A rotary encoder is an electro-mechanical device that converts the angular position to analog or digital output signals. The [Adafruit rotary encoder](https://www.adafruit.com/product/4991#technical-details) we ordered for you came pre-soldered, so you do NOT need to solder anything.
 <p float="left">
 
    
@@ -332,165 +331,41 @@ For Part 2, build the Feast Automata interaction you developed in Part D by conn
 - A simple interaction diagram or sketch showing how sensing and actuation are connected
 - Written reflection: What did you learn about connecting sensing, movement, and physical form? What was fun, surprising, or challenging?
 
+**Hydration Nudge Coaster:**
+
+The hydration nudge coaster reminds you to drink water while you study or work. When you place your glass on the coaster, a distance sensor detects it and a 20 min countdown starts on the OLED screen. When the countdown reaches zero, a servo arm taps the glass four times and the speaker says “Drink water!” Lifting the glass resets the device so it is ready for the next round.
+
+For testing and the demo, the countdown is set to 10 seconds. In real use, it would be set to around 20 minutes.
+
+**Parts Used:**
+- Raspberry Pi
+- SparkFun Servo pHAT 
+- SparkFun Qwiic Proximity Sensor 
+- SparkFun Qwiic OLED display 
+- Speaker using espeak for the voice
+- Cardboard, tape, and a pen for the tapping arm
+
 **Questions to consider:**
 - How does your chosen sensor or input shape the physical response?
+
+**The distance sensor only knows if something is close to it, so the whole interaction is built around the glass sitting on the coaster. Because the sensor gives a clear jump in readings when the glass is placed, the device can start the countdown right away and respond with a quick, clear tap.**
+
 - How does the physical arrangement of the sensor and actuator change the interaction?
+
+**The sensor sits inside the coaster facing up, so the glass has to be centered over it to be detected. The servo arm is mounted next to the coaster at the height of the bottom of the glass, so it hits the side of the glass instead of the table. If the arm or the glass is too far away, the tap does not reach, so the spacing between them matters a lot.**
+  
 - What thresholds, timing, or movement patterns make the interaction feel clear or playful?
+
+**With nothing on it, the sensor read about 1 to 3. With the glass 1 cm above it, it read about 5,100, and with the glass touching it, about 21,600. A threshold of 1000 made detection reliable. Four quick taps at 0.2 seconds each felt more noticeable and playful than one slow tap, and pairing the taps with the voice made the reminder hard to miss.**
+
 - What changes when you adjust the sensor placement or servo motion?
 
-Iterate on the sensing, movement, and physical form, and document what you discover.
-
-See encoder_accel_servo_dashboard.py in the Lab 4 folder for an optional example of chaining together three devices.
-
-**`Lab 4/encoder_accel_servo_dashboard.py`**
-
-#### Example Application: Windmill Coaster
-
-Now that you have explored both sensing and actuation, here is a simple example that combines the two.
-
-The **Windmill Coaster** uses a Qwiic distance/proximity sensor to detect when a cup is placed on a coaster. When the cup is detected, a servo motor animates a small windmill by sweeping it back and forth, turning an ordinary action during drinking into a playful physical interaction.
-
-<p align="center">
-    <img src="windmill_coaster11.gif" alt="Windmill Coaster Demo" width="400"/>
-</p>
+**Moving the glass even a little off center lowered the sensor readings, so the hole in the coaster needed to line up with the sensor. Making the servo swing faster made the tap louder and more noticeable, but if it is too fast, the arm does not swing all the way before turning back. Changing the tap angle changed how hard the arm hit the glass, so I tuned it until the tap was clear but did not move the glass.**
 
 
-This example demonstrates a simple interaction pipeline:
 
-**cup placed → distance sensor detects cup → servo actuates windmill**
+**Reflection: This project showed me that connecting sensing and movement is not just about the code, but also about how the physical parts are placed. The sensor worked well once the glass was centered over it, and the servo needed to be at the right height and distance to actually tap the glass. One challenge was a Qwiic cable that caused the sensor to throw errors, which I fixed by connecting the sensor directly to the Servo pHAT and reseating the cable. It was fun to see the device react on its own and hear it say “Drink water!” for the first time. I was surprised by how much small changes, like the tap speed or the glass position, changed how the interaction felt.**
 
-Connect the Qwiic distance sensor to the Pi and connect the servo to Channel 0 of the Servo pHAT. Make sure the Servo pHAT is powered through its USB-C connection.
-
-Run the example script:
-
-```bash
-python windmill_coaster.py
-```
-
-The script continuously reads the proximity value from the distance sensor. When the value passes a threshold, the servo begins animating the windmill. When the cup is removed, the servo stops and returns to its resting position.
-
-You may need to adjust `CUP_THRESHOLD` in [`windmill_coaster.py`](windmill_coaster.py) depending on the size of your cup and the physical placement of the sensor. You can run `qwiic_distance.py` first to compare readings with and without a cup.
-
-Use this example as a starting point. Change the sensor, movement, physical form, or dining interaction to create your own Feast Automata variation.
-
-#### Optional Extensions
-
-The following examples are optional resources if you want to add more inputs or outputs to your prototype.
-
-##### Using Multiple Qwiic Buttons: Changing I2C Address (Physically & Digitally)
-
-If you want to use more than one Qwiic Button in your project, you must give each button a unique I2C address. There are two ways to do this:
-
-##### 1. Physically: Soldering Address Jumpers
-
-On the back of the Qwiic Button, you'll find four solder jumpers labeled A0, A1, A2, and A3. By bridging these with solder, you change the I2C address. Only one button on the chain can use the default address (0x6F).
-
-**Address Table:**
-
-| A3 | A2 | A1 | A0 | Address (hex) |
-|----|----|----|----|---------------|
-|  0 |  0 |  0 |  0 |    0x6F       |
-|  0 |  0 |  0 |  1 |    0x6E       |
-|  0 |  0 |  1 |  0 |    0x6D       |
-|  0 |  0 |  1 |  1 |    0x6C       |
-|  0 |  1 |  0 |  0 |    0x6B       |
-|  0 |  1 |  0 |  1 |    0x6A       |
-|  0 |  1 |  1 |  0 |    0x69       |
-|  0 |  1 |  1 |  1 |    0x68       |
-|  1 |  0 |  0 |  0 |    0x67       |
-| ...| ...| ...| ... |     ...      |
-
-For example, if you solder A0 closed (leave A1, A2, A3 open), the address becomes 0x6E.
-
-**Soldering Tips:**
-- Use a small amount of solder to bridge the pads for the jumper you want to close.
-- Only one jumper needs to be closed for each address change (see table above).
-- Power cycle the button after changing the jumper.
-
-##### 2. Digitally: Using Software to Change Address
-
-You can also change the address in software (temporarily or permanently) using the example script `qwiic_button_ex6_changeI2CAddress.py` in the Lab 4 folder. This is useful if you want to reassign addresses without soldering.
-
-Run the script and follow the prompts:
-```bash
-python qwiic_button_ex6_changeI2CAddress.py
-```
-Enter the new address (e.g., 5B for 0x5B) when prompted. Power cycle the button after changing the address.
-
-**Note:** The software method is less foolproof and you need to make sure to keep track of which button has which address!
-
-
-##### Using Multiple Buttons in Code
-
-After setting unique addresses, you can use multiple buttons in your script. See these example scripts in the Lab 4 folder:
-
-- **`qwiic_1_button.py`**: Basic example for reading a single Qwiic Button (default address 0x6F). Run with:
-	```bash
-	python qwiic_1_button.py
-	```
-
-- **`qwiic_button_led_demo.py`**: Demonstrates using two Qwiic Buttons at different addresses (e.g., 0x6F and 0x6E) and controlling their LEDs. Button 1 toggles its own LED; Button 2 toggles both LEDs. Run with:
-	```bash
-	python qwiic_button_led_demo.py
-	```
-
-Here is a minimal code example for two buttons:
-```python
-import qwiic_button
-
-# Default button (0x6F)
-button1 = qwiic_button.QwiicButton()
-# Button with A0 soldered (0x6E)
-button2 = qwiic_button.QwiicButton(0x6E)
-
-button1.begin()
-button2.begin()
-
-while True:
-		if button1.is_button_pressed():
-				print("Button 1 pressed!")
-		if button2.is_button_pressed():
-				print("Button 2 pressed!")
-```
-
-For more details, see the [Qwiic Button Hookup Guide](https://learn.sparkfun.com/tutorials/qwiic-button-hookup-guide/all#i2c-address).
-
----
-
-##### PCF8574 GPIO Expander: Add More Pins Over I²C
-
-Sometimes your Pi’s header GPIO pins are already full (e.g., with a display or HAT). That’s where an I²C GPIO expander comes in handy.
-
-We use the Adafruit PCF8574 I²C GPIO Expander, which gives you 8 extra digital pins over I²C. It’s a great way to prototype with LEDs, buttons, or other components on the breadboard without worrying about pin conflicts—similar to how Arduino users often expand their pinouts when prototyping physical interactions.
-
-**Why is this useful?**
-- You only need two wires (I²C: SDA + SCL) to unlock 8 extra GPIOs.
-- It integrates smoothly with CircuitPython and Blinka.
-- It allows a clean prototyping workflow when the Pi’s 40-pin header is already occupied by displays, HATs, or sensors.
-- Makes breadboard setups feel more like an Arduino-style prototyping environment where it’s easy to wire up interaction elements.
-
-**Demo Script:** `Lab 4/gpio_expander.py`
-
-<p align="center">
-    <img src="gpio_leds.gif" alt="GPIO Expander LED Demo" width="400"/>
-</p>
-
-We connected 8 LEDs (through 220 Ω resistors) to the expander and ran a little light show. The script cycles through three patterns:
-- Chase (one LED at a time, left to right)
-- Knight Rider (back-and-forth sweep)
-- Disco (random blink chaos)
-
-Every few runs, the script swaps to the next pattern automatically:
-```bash
-python gpio_expander.py
-```
-
-This is a playful way to visualize how the expander works, but the same technique applies if you wanted to prototype buttons, switches, or other interaction elements. It’s a lightweight, flexible addition to your prototyping toolkit.
-
----
-
-
----
 
 ---
 
@@ -504,15 +379,54 @@ Document all the prototypes and iterations you have designed and worked on! Agai
 * "Acts like": shows how a person would interact with the device
 
 ---
+**Interaction diagram: the distance sensor detects the glass, the Raspberry Pi runs a 10 second countdown on the OLED, and when it hits zero the servo taps the glass and the speaker says “Drink water!” Lifting the glass resets the device for the next round.**
 
-## Deliverables \& Submission for Lab 4
+<img width="670" height="471" alt="Screenshot 2026-10-19 at 3 03 57 PM" src="https://github.com/user-attachments/assets/17996140-968d-4aa2-9c83-59ffe8640cc0" />
 
-The deliverables for this lab are, writings, sketches, photos, and videos that show what your prototype:
-* "Looks like": shows how the device should look, feel, sit, weigh, etc.
-* "Works like": shows what the device can do.
-* "Acts like": shows how a person would interact with the device.
 
-For submission, the readme.md page for this lab should be edited to include the work you have done:
-* Upload any materials that explain what you did, into your lab 4 repository, and link them in your lab 4 readme.md.
-* Link your Lab 4 readme.md in your main Interactive-Lab-Hub readme.md. 
-* Labs are due on Mondays, make sure to submit your Lab 4 readme.md to Canvas.
+
+
+
+
+**Looks Like**
+
+The device looks like a small coaster with a servo arm standing next to it. The water bottle/glass sits on top of the coaster, right over the distance sensor, and the OLED screen shows the countdown. It is small enough to sit on a desk next to a laptop.
+
+<img width="552" height="724" alt="Screenshot 2026-10-19 at 2 54 56 PM" src="https://github.com/user-attachments/assets/4acf91cd-4af8-437b-82b3-dc9cae10ec47" />
+
+**Prototype setup:** a cardboard coaster holds the distance sensor in a cutout at its center so it can detect the glass placed on top. Next to it, a servo taped to the desk swings a pen, which acts as the tapping arm, and both are wired to the Raspberry Pi through the Servo pHAT.
+
+
+**Works Like**
+
+When a glass is placed on the coaster, the distance sensor detects it and the OLED starts a 10 second countdown. When the countdown reaches zero, the servo arm taps the glass four times and the speaker says “Drink water!” When the glass is lifted, the device resets and shows “Place your glass” again.
+
+<img width="552" height="631" alt="Screenshot 2026-10-19 at 2 55 06 PM" src="https://github.com/user-attachments/assets/12eb0e33-a979-47f3-8709-1abf482d3288" />
+
+**Prototype in use:** a water bottle sits on the cardboard coaster, right over the distance sensor, which starts the countdown. The servo with the pen arm is taped down next to it so it can swing over and tap the bottle when time runs out, and the speaker on the left says “Drink water!”
+
+
+<img width="468" height="449" alt="Screenshot 2026-10-19 at 2 54 36 PM" src="https://github.com/user-attachments/assets/3e7a0252-7b2c-443c-9961-5545b1436846" />
+
+**Waiting:** The OLED, mounted in the front of the cardboard base, tells the user to place their glass on the coaster.
+
+<img width="512" height="531" alt="Screenshot 2026-10-19 at 2 54 29 PM" src="https://github.com/user-attachments/assets/c42ca180-b9a3-4d23-a462-f8789a577689" />
+
+**Countdown:** Once the glass is detected, the OLED counts down the seconds until the next reminder.
+
+<img width="533" height="543" alt="Screenshot 2026-10-19 at 2 54 24 PM" src="https://github.com/user-attachments/assets/aa26d880-489e-4b49-8d5f-936a4f12ea4f" />
+
+**Reminder:** When the countdown hits zero, the OLED shows “Drink water!” while the servo taps the glass and the speaker says the reminder out loud.
+
+
+
+**Acts Like**
+
+A person sets their glass on the coaster while they study or work and forgets about it. When the timer runs out, the tapping sound and the voice get their attention and remind them to take a drink. Picking up the glass to drink resets the device, so the reminder fits into the normal habit of drinking water without needing any buttons or extra steps.
+
+
+**Final Interactive Video:** https://drive.google.com/file/d/1BMjYWUDDqvZp8Z3TMxqV-f14SEcyf-VD/view?usp=sharing
+
+**The code** for this prototype is in [hydration_coaster.py](hydration_coaster.py).
+
+
