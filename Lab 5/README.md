@@ -210,6 +210,9 @@ Consider how you might use this position based approach to create an interaction
 <img width="442" height="391" alt="Screenshot 2026-10-24 at 7 36 35 PM" src="https://github.com/user-attachments/assets/c1593753-4cbd-494c-9666-0a82c56976ba" />
 <img width="448" height="387" alt="Screenshot 2026-10-24 at 7 36 17 PM" src="https://github.com/user-attachments/assets/d549c991-72ae-4fc0-ba75-c72fb43bb9c6" />
 
+For pinch control, the volume changed based on how far apart my thumb and index finger were, going up as I spread my fingers and down as I brought them together. When I made the Quiet Coyote gesture (middle and ring fingers touching the thumb, index and pinky up), it recognized it right away and muted the volume. Both features worked well when my hand faced the camera, but the tracking was less steady when my hand moved fast or was tilted.
+
+In my observant system, I could use the Quiet Coyote gesture as the “before bed” hand-off. Making the gesture at the camera would tell the device to start watching for the night, and an LED could dim to confirm it. I could also use body pose tracking during the night to tell whether someone is lying down, sitting up, or standing, which gives more useful information than just knowing a person is there. Since the Pi is fairly slow, the gesture would need to be held for a second or two so it does not trigger by accident.
 
 
 ## Part D. 
