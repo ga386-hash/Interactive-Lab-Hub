@@ -163,6 +163,12 @@ Then press q to quit and run it again with a flag. Each one changes a single thi
 
 \*\*\***Include a short video or screenshots of your experiments with the person detection. Write down three situations where it did not see you, or saw a person who was not there, and what you think the cause was.**\*\*\*
 
+<img width="365" height="320" alt="Screenshot 2026-10-24 at 1 47 32 PM" src="https://github.com/user-attachments/assets/db734465-a016-49b3-8ed0-7e7a50c575aa" />
+<img width="363" height="321" alt="Screenshot 2026-10-24 at 1 47 18 PM" src="https://github.com/user-attachments/assets/bbb82ba8-f7b2-49d3-8100-94b6363524f7" />
+<img width="369" height="320" alt="Screenshot 2026-10-24 at 1 47 06 PM" src="https://github.com/user-attachments/assets/1d1b7301-a379-43d9-beb3-144d17d27bf8" />
+<img width="365" height="315" alt="Screenshot 2026-10-24 at 1 47 44 PM" src="https://github.com/user-attachments/assets/02ae490a-fd8a-46c1-94ce-c5c85d65fd15" />
+<img width="363" height="322" alt="Screenshot 2026-10-24 at 1 47 26 PM" src="https://github.com/user-attachments/assets/78bc7f3a-3331-4bd5-81ae-03d47f72a660" />
+<img width="361" height="321" alt="Screenshot 2026-10-24 at 1 47 39 PM" src="https://github.com/user-attachments/assets/f8886312-53a3-46e0-a9d4-66c9253f0a9f" />
 
 
 ## Part C. 
