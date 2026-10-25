@@ -247,10 +247,23 @@ A 0.8B model is slow and sometimes wrong. It will invent events that are not in 
 
 \*\*\***Ask Qwen three questions to answer. Paste the questions, the answers and how long each took. Try one of them with `qwen3:0.6b` and compare.**\*\*\*
 
-<details>
-  Q&A here
-</details>
+Question 1 (qwen3.5:0.8b, 58.8 s): “Tell me a bit about the history of Roosevelt Island.”
 
+Roosevelt Island was originally built as a private residence by John Quincy Adams, who later became President of the United States. The island was purchased by the British in 1785 and served as their summer home before being sold to the Americans. It remained an isolated community until it was annexed by New York City in 1904, where it became a central part of the city’s skyline.
+
+Same question with qwen3:0.6b (31.5 s):
+
+Roosevelt Island is a small, remote island located in the Pacific Ocean, off the coast of California. It was first established as a residential area in the 19th century, originally used as a military base by the U.S. during World War II. The island was later incorporated into the U.S. state of Hawaii in 1962, becoming a significant part of the state’s identity and culture. Today, it serves as a peaceful retreat, offering residents a tranquil environment while preserving its historical and natural heritage.
+
+Question 2 (qwen3.5:0.8b, 10.0 s): “What is the boiling point of water at sea level, in Celsius and Fahrenheit?”
+
+The boiling point of pure water at sea level is 100°C (212°F). This occurs when atmospheric pressure equals one atmosphere.
+
+Question 3 (qwen3.5:0.8b with image, 74.2 s): “What is in this photo?” using snap.jpg
+
+A man with a beard and glasses is smiling while looking down at his reflection, captured upside down on a wall.
+
+Comparison: Both models got Roosevelt Island wrong. The 0.8b model made up a fake history, and the 0.6b model was faster but placed the island in the Pacific Ocean. The boiling point answer was correct since it’s a common fact. For the photo, it got that I was smiling and upside down but added a beard and glasses that weren’t there. 
 
 ## Part E. 
 ### Connect: from YOLO readings to Qwen reasoning
