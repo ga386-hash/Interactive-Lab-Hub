@@ -325,6 +325,18 @@ Use storyboards and/or [Verplank diagrams](https://ccrma.stanford.edu/courses/25
 
 \*\*\***Insert ideas, sketches, Verplank diagrams and storyboards for your night-time interaction here.**\*\*\*
 
+Idea 1: Night Noise Detector. This device sits by my window and listens for loud sounds while I sleep. Before bed, I do the Quiet Coyote gesture at the camera, and the LED dims to show it started listening. During the night, the mic picks up loud sounds and a sound model labels them, like sirens, construction, or voices. The camera also checks for flashing red and blue lights to help confirm sirens. It only saves numbers and labels, not audio. In the morning, Qwen gives me a short report on what happened, so I can see what might have woken me up.
+
+<img width="733" height="268" alt="Screenshot 2026-10-28 at 6 31 16 PM" src="https://github.com/user-attachments/assets/60eca47f-a8cc-4b3c-82c8-408180a9e7ca" />
+
+Idea 2: Late-Night Screen Time Tracker. This device tracks how long I stay on my phone after I turn off the lights. Before bed, I do the Spider-Man hand gesture at the camera, and the LED dims to show it started watching. During the night, the camera only measures how bright the room is. It logs when the lights go off and any screen glow on the wall or ceiling after that. It does not save any photos. In the morning, Qwen shows me when the lights went off and when I actually stopped using my phone, so I can see how much later I really went to sleep.
+
+<img width="781" height="278" alt="Screenshot 2026-10-28 at 6 32 00 PM" src="https://github.com/user-attachments/assets/3dbd555b-df7c-4c65-9712-1d7362cb6caf" />
+
+
+
+
+
 ## Prep for Part 2
 
 1. Look at and give feedback on the Part F storyboards.
