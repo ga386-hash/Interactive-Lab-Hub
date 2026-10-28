@@ -329,11 +329,11 @@ Idea 1: Night Noise Detector. This device sits by my window and listens for loud
 
 <img width="733" height="268" alt="Screenshot 2026-10-28 at 6 31 16 PM" src="https://github.com/user-attachments/assets/60eca47f-a8cc-4b3c-82c8-408180a9e7ca" />
 
+
+
 Idea 2: Late-Night Screen Time Tracker. This device tracks how long I stay on my phone after I turn off the lights. Before bed, I do the Spider-Man hand gesture at the camera, and the LED dims to show it started watching. During the night, the camera only measures how bright the room is. It logs when the lights go off and any screen glow on the wall or ceiling after that. It does not save any photos. In the morning, Qwen shows me when the lights went off and when I actually stopped using my phone, so I can see how much later I really went to sleep.
 
 <img width="781" height="278" alt="Screenshot 2026-10-28 at 6 32 00 PM" src="https://github.com/user-attachments/assets/3dbd555b-df7c-4c65-9712-1d7362cb6caf" />
-
-
 
 
 
@@ -341,9 +341,13 @@ Idea 2: Late-Night Screen Time Tracker. This device tracks how long I stay on my
 
 1. Look at and give feedback on the Part F storyboards.
    **Put the feedback for your ideas here.**
-2. [Update your Lab Hub](prep.md#get-the-latest-content) to get the latest content for Part 2.
-3. Decide where the device will spend the night and who else lives there. Get their OK before the first run.
-4. Revise your storyboard with the feedback and with what you learned in Part E about where the pipeline breaks.
+
+Feedback: I think a nighttime noise detector is a useful idea for someone living in a city, where sounds like traffic, sirens, or construction can disrupt sleep. I also like the idea of using a peace sign to initialize the system, since it makes the interaction simple and intuitive. Combining the camera and microphone is smart, especially because one of the biggest challenges will be distinguishing noise coming from outside the building from sounds originating inside the room. A possible improvement could be experimenting with microphone placement or adding a simple physical sound guide, such as a cardboard tube, to make the microphone more directional. It could also be interesting to compare the detected noise events with their timestamps to identify patterns in nighttime disturbances.
+
+
+3. [Update your Lab Hub](prep.md#get-the-latest-content) to get the latest content for Part 2.
+4. Decide where the device will spend the night and who else lives there. Get their OK before the first run.
+5. Revise your storyboard with the feedback and with what you learned in Part E about where the pipeline breaks.
 
 \*\*\***Post your revised storyboard here.**\*\*\*
 
