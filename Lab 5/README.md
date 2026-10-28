@@ -351,6 +351,10 @@ Feedback: I think a nighttime noise detector is a useful idea for someone living
 
 \*\*\***Post your revised storyboard here.**\*\*\*
 
+<img width="750" height="319" alt="Screenshot 2026-10-28 at 7 14 07 PM" src="https://github.com/user-attachments/assets/d3fb1452-878f-440c-aba7-0efdc626ff63" />
+
+Final idea: Night Noise Detector is a device that sits by the window and listens for loud sounds while the user sleeps, which is helpful for people living in a busy city. Before bed, the user makes a peace sign at the camera, and the LED dims with a soft tone to show the device has started listening. During the night, a microphone with a cardboard tube pointed outside picks up street sounds, and a sound model labels each loud event, such as sirens, construction, voices, or trucks. The camera also checks for flashing red and blue lights to help confirm sirens. The device only saves numbers and labels, not audio. In the morning, Qwen reads the log and shows the user a short report with a timeline of the night, so they can see what may have woken them up and spot patterns over time.
+
 ## Part G. 
 ### Design the interaction before
 
