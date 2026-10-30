@@ -1,0 +1,7 @@
+{"date": "2026-10-30", "time": "00:42:10", "kind": "voices", "seconds": 35, "peak_db": -30.1, "above_background_db": 14.2, "top_label": "Speech"}
+{"date": "2026-10-30", "time": "01:40:05", "kind": "siren", "seconds": 48, "peak_db": -22.4, "above_background_db": 21.9, "top_label": "Ambulance (siren)"}
+{"date": "2026-10-30", "time": "01:58:30", "kind": "siren", "seconds": 20, "peak_db": -26.0, "above_background_db": 18.3, "top_label": "Police car (siren)"}
+{"date": "2026-10-30", "time": "02:15:12", "kind": "traffic", "seconds": 6, "peak_db": -31.5, "above_background_db": 12.8, "top_label": "Vehicle horn, car horn, honking"}
+{"date": "2026-10-30", "time": "03:05:44", "kind": "siren", "seconds": 15, "peak_db": -27.3, "above_background_db": 17.0, "top_label": "Siren"}
+{"date": "2026-10-30", "time": "06:50:02", "kind": "construction", "seconds": 120, "peak_db": -24.8, "above_background_db": 19.5, "top_label": "Jackhammer"}
+{"date": "2026-10-30", "time": "07:10:30", "kind": "construction", "seconds": 90, "peak_db": -25.6, "above_background_db": 18.7, "top_label": "Drill"}
