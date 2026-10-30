@@ -136,6 +136,8 @@ pi@raspberrypi:~ $ ollama list
 
 \*\*\***Include a screenshot of `ollama list` showing your models.**\*\*\*
 
+<img width="561" height="74" alt="Screenshot 2026-10-24 at 1 19 23 PM" src="https://github.com/user-attachments/assets/73dcffef-e731-43c4-9442-3ca113e1730d" />
+
 
 ## Part B. 
 ### See: recognize people in real time with YOLO
@@ -161,6 +163,20 @@ Then press q to quit and run it again with a flag. Each one changes a single thi
 
 \*\*\***Include a short video or screenshots of your experiments with the person detection. Write down three situations where it did not see you, or saw a person who was not there, and what you think the cause was.**\*\*\*
 
+<img width="365" height="320" alt="Screenshot 2026-10-24 at 1 47 32 PM" src="https://github.com/user-attachments/assets/db734465-a016-49b3-8ed0-7e7a50c575aa" />
+<img width="363" height="321" alt="Screenshot 2026-10-24 at 1 47 18 PM" src="https://github.com/user-attachments/assets/bbb82ba8-f7b2-49d3-8100-94b6363524f7" />
+<img width="369" height="320" alt="Screenshot 2026-10-24 at 1 47 06 PM" src="https://github.com/user-attachments/assets/1d1b7301-a379-43d9-beb3-144d17d27bf8" />
+<img width="365" height="315" alt="Screenshot 2026-10-24 at 1 47 44 PM" src="https://github.com/user-attachments/assets/02ae490a-fd8a-46c1-94ce-c5c85d65fd15" />
+<img width="363" height="322" alt="Screenshot 2026-10-24 at 1 47 26 PM" src="https://github.com/user-attachments/assets/78bc7f3a-3331-4bd5-81ae-03d47f72a660" />
+<img width="361" height="321" alt="Screenshot 2026-10-24 at 1 47 39 PM" src="https://github.com/user-attachments/assets/f8886312-53a3-46e0-a9d4-66c9253f0a9f" />
+
+It saw a “person” when only my hand was in the frame. When I held my wallet near the edge of the camera, at first it did not detect anything. When I moved it slightly so more of my hand showed, it drew a “person” box with 0.79 confidence around the wallet and my hand. The box covered mostly the wallet, not a body. I think this happened because skin and fingers are strong clues for the “person” class, so the model guesses there is a full person even when only a small part is visible. In a real system, this means a hand reaching into the frame could be counted as someone walking in.
+
+It saw people in a photo on my phone. When I held up my phone showing a picture of a group of people, the model drew separate boxes around each person in the photo, with confidence between 0.47 and 0.86. Some of these were even more confident than its detection of me in the same frame (0.48). The model only sees a flat 2D image, so it has no way to know that the people on the screen are not real and not in the room. A TV, poster, or photo on the wall could cause the same false detection.
+
+It was less confident when only part of me was in the frame. When my full face was in view and close to the camera, it detected me with 0.90 confidence. When only my shoulder, arm, and the side of my body were in the frame, the confidence dropped to between 0.48 and 0.63. When I ran it with --conf 0.7, it stopped detecting me in these partial views. The model depends a lot on faces and full body shapes, so when those are cut off it has less information. This means that if someone is sitting at the edge of the frame or partly blocked, the system could miss them completely with a high threshold.
+
+What I learned: a low threshold (0.2) catches more people but also more false ones, like photos and hands. A high threshold (0.7) avoids false detections but misses people who are partly visible. For an observant system, I would need to choose the threshold based on whether missing someone or falsely detecting someone is worse.
 
 
 ## Part C. 
@@ -188,6 +204,15 @@ Try the two main features of this script: 1) pinching for percentage control (th
 Consider how you might use this position based approach to create an interaction, and write how you might use it on either face, hand or body pose tracking.
 
 \*\*\***Include a screenshot or short video of the hand pose demo, and write how you might use face, hand or body pose tracking in your observant system.**\*\*\*
+
+<img width="446" height="381" alt="Screenshot 2026-10-24 at 7 37 45 PM" src="https://github.com/user-attachments/assets/fe36e2e4-0ec7-4028-964d-d0648dc1e54d" />
+<img width="446" height="389" alt="Screenshot 2026-10-24 at 7 36 45 PM" src="https://github.com/user-attachments/assets/c5b0b1b2-c525-469a-87e6-4490a68a0875" />
+<img width="442" height="391" alt="Screenshot 2026-10-24 at 7 36 35 PM" src="https://github.com/user-attachments/assets/c1593753-4cbd-494c-9666-0a82c56976ba" />
+<img width="448" height="387" alt="Screenshot 2026-10-24 at 7 36 17 PM" src="https://github.com/user-attachments/assets/d549c991-72ae-4fc0-ba75-c72fb43bb9c6" />
+
+For pinch control, the volume changed based on how far apart my thumb and index finger were, going up as I spread my fingers and down as I brought them together. When I made the Quiet Coyote gesture (middle and ring fingers touching the thumb, index and pinky up), it recognized it right away and muted the volume. Both features worked well when my hand faced the camera, but the tracking was less steady when my hand moved fast or was tilted.
+
+In my observant system, I could use the Quiet Coyote gesture as the “before bed” hand-off. Making the gesture at the camera would tell the device to start watching for the night, and an LED could dim to confirm it. I could also use body pose tracking during the night to tell whether someone is lying down, sitting up, or standing, which gives more useful information than just knowing a person is there. Since the Pi is fairly slow, the gesture would need to be held for a second or two so it does not trigger by accident.
 
 
 ## Part D. 
@@ -222,10 +247,23 @@ A 0.8B model is slow and sometimes wrong. It will invent events that are not in 
 
 \*\*\***Ask Qwen three questions to answer. Paste the questions, the answers and how long each took. Try one of them with `qwen3:0.6b` and compare.**\*\*\*
 
-<details>
-  Q&A here
-</details>
+Question 1 (qwen3.5:0.8b, 58.8 s): “Tell me a bit about the history of Roosevelt Island.”
 
+Roosevelt Island was originally built as a private residence by John Quincy Adams, who later became President of the United States. The island was purchased by the British in 1785 and served as their summer home before being sold to the Americans. It remained an isolated community until it was annexed by New York City in 1904, where it became a central part of the city’s skyline.
+
+Same question with qwen3:0.6b (31.5 s):
+
+Roosevelt Island is a small, remote island located in the Pacific Ocean, off the coast of California. It was first established as a residential area in the 19th century, originally used as a military base by the U.S. during World War II. The island was later incorporated into the U.S. state of Hawaii in 1962, becoming a significant part of the state’s identity and culture. Today, it serves as a peaceful retreat, offering residents a tranquil environment while preserving its historical and natural heritage.
+
+Question 2 (qwen3.5:0.8b, 10.0 s): “What is the boiling point of water at sea level, in Celsius and Fahrenheit?”
+
+The boiling point of pure water at sea level is 100°C (212°F). This occurs when atmospheric pressure equals one atmosphere.
+
+Question 3 (qwen3.5:0.8b with image, 74.2 s): “What is in this photo?” using snap.jpg
+
+A man with a beard and glasses is smiling while looking down at his reflection, captured upside down on a wall.
+
+Comparison: Both models got Roosevelt Island wrong. The 0.8b model made up a fake history, and the 0.6b model was faster but placed the island in the Pacific Ocean. The boiling point answer was correct since it’s a common fact. For the photo, it got that I was smiling and upside down but added a beard and glasses that weren’t there. 
 
 ## Part E. 
 ### Connect: from YOLO readings to Qwen reasoning
@@ -287,15 +325,35 @@ Use storyboards and/or [Verplank diagrams](https://ccrma.stanford.edu/courses/25
 
 \*\*\***Insert ideas, sketches, Verplank diagrams and storyboards for your night-time interaction here.**\*\*\*
 
+Idea 1: Night Noise Detector. This device sits by my window and listens for loud sounds while I sleep. Before bed, I do the Quiet Coyote gesture at the camera, and the LED dims to show it started listening. During the night, the mic picks up loud sounds and a sound model labels them, like sirens, construction, or voices. The camera also checks for flashing red and blue lights to help confirm sirens. It only saves numbers and labels, not audio. In the morning, Qwen gives me a short report on what happened, so I can see what might have woken me up.
+
+<img width="733" height="268" alt="Screenshot 2026-10-28 at 6 31 16 PM" src="https://github.com/user-attachments/assets/60eca47f-a8cc-4b3c-82c8-408180a9e7ca" />
+
+
+
+Idea 2: Late-Night Screen Time Tracker. This device tracks how long I stay on my phone after I turn off the lights. Before bed, I do the Spider-Man hand gesture at the camera, and the LED dims to show it started watching. During the night, the camera only measures how bright the room is. It logs when the lights go off and any screen glow on the wall or ceiling after that. It does not save any photos. In the morning, Qwen shows me when the lights went off and when I actually stopped using my phone, so I can see how much later I really went to sleep.
+
+<img width="781" height="278" alt="Screenshot 2026-10-28 at 6 32 00 PM" src="https://github.com/user-attachments/assets/3dbd555b-df7c-4c65-9712-1d7362cb6caf" />
+
+
+
 ## Prep for Part 2
 
 1. Look at and give feedback on the Part F storyboards.
    **Put the feedback for your ideas here.**
-2. [Update your Lab Hub](prep.md#get-the-latest-content) to get the latest content for Part 2.
-3. Decide where the device will spend the night and who else lives there. Get their OK before the first run.
-4. Revise your storyboard with the feedback and with what you learned in Part E about where the pipeline breaks.
+
+Feedback: I think a nighttime noise detector is a useful idea for someone living in a city, where sounds like traffic, sirens, or construction can disrupt sleep. I also like the idea of using a peace sign to initialize the system, since it makes the interaction simple and intuitive. Combining the camera and microphone is smart, especially because one of the biggest challenges will be distinguishing noise coming from outside the building from sounds originating inside the room. A possible improvement could be experimenting with microphone placement or adding a simple physical sound guide, such as a cardboard tube, to make the microphone more directional. It could also be interesting to compare the detected noise events with their timestamps to identify patterns in nighttime disturbances.
+
+
+3. [Update your Lab Hub](prep.md#get-the-latest-content) to get the latest content for Part 2.
+4. Decide where the device will spend the night and who else lives there. Get their OK before the first run.
+5. Revise your storyboard with the feedback and with what you learned in Part E about where the pipeline breaks.
 
 \*\*\***Post your revised storyboard here.**\*\*\*
+
+<img width="750" height="319" alt="Screenshot 2026-10-28 at 7 14 07 PM" src="https://github.com/user-attachments/assets/d3fb1452-878f-440c-aba7-0efdc626ff63" />
+
+Final idea: Night Noise Detector is a device that sits by the window and listens for loud sounds while the user sleeps, which is helpful for people living in a busy city. Before bed, the user makes a peace sign at the camera, and the LED dims with a soft tone to show the device has started listening. During the night, a microphone with a cardboard tube pointed outside picks up street sounds, and a sound model labels each loud event, such as sirens, construction, voices, or trucks. The camera also checks for flashing red and blue lights to help confirm sirens. The device only saves numbers and labels, not audio. In the morning, Qwen reads the log and shows the user a short report with a timeline of the night, so they can see what may have woken them up and spot patterns over time.
 
 ## Part G. 
 ### Design the interaction before
