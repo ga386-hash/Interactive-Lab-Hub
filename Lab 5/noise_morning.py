@@ -113,3 +113,35 @@ if pick is None:
 w = events[pick]
 print(f"Most likely woke you: {w['kind']} at {t(w['start'])}, {w['seconds']} seconds, "
       f"{w['above_background_db']} dB above background.  [picked by {source}]")
+
+# ---- chart ----
+import matplotlib
+matplotlib.use("Agg")
+import matplotlib.pyplot as plt
+import matplotlib.dates as mdates
+
+colors = {"siren": "#E24B4A", "construction": "#BA7517", "voices": "#888780", "traffic": "#378ADD",
+          "dog": "#1D9E75", "music": "#7F77DD", "inside": "#D4537E", "other": "#B4B2A9"}
+
+fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(9, 6), gridspec_kw={"height_ratios": [2, 1]})
+
+min_width = timedelta(minutes=6)
+for e in events:
+    width = max(timedelta(seconds=e["seconds"]), min_width)
+    ax1.bar(e["start"], e["above_background_db"], width=width, align="edge",
+            color=colors.get(e["kind"], "#B4B2A9"))
+ax1.set_title("Last night's noise")
+ax1.set_ylabel("dB above background")
+ax1.xaxis.set_major_formatter(mdates.DateFormatter("%-I %p"))
+ax1.xaxis.set_major_locator(mdates.HourLocator())
+ax1.spines[["top", "right"]].set_visible(False)
+
+kinds_sorted = [k for k, _ in counts.most_common()][::-1]
+ax2.barh(kinds_sorted, [counts[k] for k in kinds_sorted], color=[colors.get(k, "#B4B2A9") for k in kinds_sorted])
+ax2.set_xlabel("Number of events")
+ax2.xaxis.get_major_locator().set_params(integer=True)
+ax2.spines[["top", "right"]].set_visible(False)
+
+fig.tight_layout()
+fig.savefig("noise_report.png", dpi=120)
+print("Chart saved to noise_report.png")
