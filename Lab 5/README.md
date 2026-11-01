@@ -360,7 +360,7 @@ Final idea: Night Noise Detector is a device that sits by the window and listens
 
 The hand-off: the person tells the device what to watch tonight, and the device acknowledges it. Keep it to a thirty-second ritual. A button or a touch (Lab 4), a spoken sentence (Lab 3), a wave or a Quiet Coyote at the camera (Part C). The acknowledgement can be a line on the display, a tone, or an LED that dims rather than lights up. At its simplest, the hand-off just sets the question that the morning will answer.
 
-\*\*\***Describe the interaction before.**\*\*\*
+**Before going to sleep, the user stands by the window and holds up a peace sign to the camera. The PiTFT screen first says “Show a peace sign to start the night.” When the camera sees the peace sign for about a second and a half, the screen changes to “Listening. Goodnight.” and then turns off so it does not light up the room. This tells the user the device has started. The whole thing takes only a few seconds, so it is easy to do every night.**
 
 ## Part H. 
 ### Incorporate the observant system
