@@ -2,9 +2,9 @@
 
 **Team:**
 
-**Members:** Full Name (netid, github-handle), ...
+**Members:** Gal Alon
 
-**Project name:**
+**Project name:** Night Noise Detector
 
 <details>
 	<summary><strong>Instructions for Students (Click to Expand)</strong></summary>
