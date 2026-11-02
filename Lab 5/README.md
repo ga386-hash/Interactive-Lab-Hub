@@ -451,6 +451,10 @@ At bedtime, the user stands by the window and makes a peace sign at the camera, 
 <img width="3024" height="4032" alt="IMG_0756 2" src="https://github.com/user-attachments/assets/2a196232-c895-40f3-8e68-ef27310e83e9" />
 
 
+<img width="640" height="360" alt="siren_20261030_152654" src="https://github.com/user-attachments/assets/98a4532f-13c9-4382-9a31-72c0127ecfa1" />
+
+This photo above was taken by my system during a test. Since I could not wait for a real siren to pass in front of the camera, I played a video of a police car with its lights on and held my phone in front of the webcam while the siren sound played near the microphone. When the microphone heard the loud sound, the camera checked for red and blue light at the same time. It found red and blue flashing close together, marked the event as having lights, and saved this photo from the moment the lights were brightest. You can see the police car with its red and blue lights in the middle of the screen. The photo also shows a red traffic light at the top, which is a good example of why my system looks for red and blue together instead of just red, since a single red light like a traffic light or brake light should not count as a siren. In a real night, the lights would be much smaller and farther away from my 12th floor window, so the camera would likely only catch sirens on the part of the street it can see.
+
 **Demo Video:**
 
 Before/During the night:
@@ -459,7 +463,6 @@ https://drive.google.com/file/d/1lv1RMxCFARUE2WRE94eQ6-NGYdAhX3Yw/view?usp=shari
 After the night:
 https://drive.google.com/file/d/1h4qBoOSvxx9mU8kvZk8wbA7il4n0soQN/view?usp=sharing
 
-<img width="640" height="360" alt="siren_20261030_152654" src="https://github.com/user-attachments/assets/98a4532f-13c9-4382-9a31-72c0127ecfa1" />
 
 ## Deliverables & Submission for Lab 5
 
