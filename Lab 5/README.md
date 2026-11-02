@@ -433,7 +433,7 @@ What the results show:
 * The loudest sound was a siren. The siren at 12:53 AM lasted 72 seconds and was 29.1 dB above the background, the loudest event of the night. It is the tallest red bar on the chart. This was right after I went to bed, so it is the sound most likely to have kept me up.
 * The quietest stretch was 2:23 AM to 3:24 AM, a full hour with no loud sounds at all.
 Sirens came at all hours. There were sirens at 12:53, 1:40, 2:03, 2:23, and 6:15 AM, and several in a row around 8:01 and 8:30 AM.
-* Some sounds came from inside. The two “Door” events at 12:49 AM were me getting ready for bed after starting the device, which shows the tube helps but does not block inside sounds completely.
+* Some sounds came from inside. The two “Door” events at 12:49 AM were me getting ready for bed after starting the device.
 * The morning pick was not perfect. Qwen picked a 96 second traffic event at 8:35 AM as what most likely woke me, but I was probably already awake by then.
 
 
