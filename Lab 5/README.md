@@ -456,6 +456,12 @@ At bedtime, the user stands by the window and makes a peace sign at the camera, 
 
 
 
+<img width="568" height="366" alt="Screenshot 2026-11-02 at 9 32 35 AM" src="https://github.com/user-attachments/assets/ae73c1f9-2f8f-4596-869d-0ccc8d82c0d5" />
+^Live lines from the logger
+
+
+
+
 
 <img width="640" height="360" alt="siren_20261030_152654" src="https://github.com/user-attachments/assets/98a4532f-13c9-4382-9a31-72c0127ecfa1" />
 
