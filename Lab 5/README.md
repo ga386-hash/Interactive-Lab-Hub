@@ -353,7 +353,7 @@ Feedback: I think a nighttime noise detector is a useful idea for someone living
 
 <img width="750" height="319" alt="Screenshot 2026-10-28 at 7 14 07 PM" src="https://github.com/user-attachments/assets/d3fb1452-878f-440c-aba7-0efdc626ff63" />
 
-Final idea: Night Noise Detector is a device that sits by the window and listens for loud sounds while the user sleeps, which is helpful for people living in a busy city. Before bed, the user makes a peace sign at the camera, and the device starts listening. During the night, a microphone next to my window picks up street sounds, and a sound model labels each loud event, such as sirens, construction, voices, or trucks. The camera also checks for flashing red and blue lights to help confirm sirens. The device only saves numbers and labels, not audio. In the morning, Qwen reads the log and shows the user a short report with a timeline of the night, so they can see what may have woken them up and spot patterns over time.
+**Final idea:** Night Noise Detector is a device that sits by the window and listens for loud sounds while the user sleeps, which is helpful for people living in a busy city. Before bed, the user makes a peace sign at the camera, and the device starts listening. During the night, a microphone next to my window picks up street sounds, and a sound model labels each loud event, such as sirens, construction, voices, or trucks. The camera also checks for flashing red and blue lights to help confirm sirens. The device only saves numbers and labels, not audio. In the morning, Qwen reads the log and shows the user a short report with a timeline of the night, so they can see what may have woken them up and spot patterns over time.
 
 ## Part G. 
 ### Design the interaction before
@@ -382,24 +382,53 @@ Setup:
 ## Part I. 
 ### Design the interaction after
 
-Instead of morning.py, I made my own script, noise_morning.py, and showed the report on the Mini PiTFT along with a timeline chart. In the morning, the user presses a button on the PiTFT. The device stops listening, builds the report, and shows it on the screen. The user presses the button to flip through the pages: a short summary of the night, which sound most likely woke them up, a siren photo if the camera caught flashing lights, and a chart of the whole night.
+**Instead of morning.py, I made my own script, noise_morning.py, and showed the report on the Mini PiTFT along with a timeline chart. In the morning, the user presses a button on the PiTFT. The device stops listening, builds the report, and shows it on the screen. The user presses the button to flip through the pages: a short summary of the night, which sound most likely woke them up, a siren photo if the camera caught flashing lights, and a chart of the whole night.**
 
-At first, I had Qwen write the full report, but it made up times and mixed up facts. For example, it said the quietest stretch lasted “120 seconds,” which was actually the length of a construction event. To fix this, I gave Qwen a much smaller job. Python works out the facts and writes the summary, and Qwen only picks which event most likely woke the user from a numbered list, using JSON. If Qwen gives a bad answer, the code uses the loudest event instead. To be honest about a night where nothing happened, the screen simply says “Quiet night. No loud events were logged.”
+**At first, I had Qwen write the full report, but it made up times and mixed up facts. For example, it said the quietest stretch lasted “120 seconds,” which was actually the length of a construction event. To fix this, I gave Qwen a much smaller job. Python works out the facts and writes the summary, and Qwen only picks which event most likely woke the user from a numbered list, using JSON. If Qwen gives a bad answer, the code uses the loudest event instead. To be honest about a night where nothing happened, the screen simply says “Quiet night. No loud events were logged.”**
 
 
 ## Final documentation
 
-Document all the prototypes and iterations you have designed and worked on. The deliverables for this lab are writings, sketches, photos, and videos that show what your system:
+**Prototypes and iterations:**
 
-* "Looks like": how the device sits in the room at night, and what it looks like at bedtime and in the morning.
-* "Works like": the pipeline from detector to interpreter to log to reasoner, with a real night's data.
-* "Acts like": how a person hands the night over and what they get back.
+My project, Night Noise Detector, went through several versions before the final one:
+
+1. Sound test: I first tested YAMNet on a 10 second recording of a siren video. It labeled almost every second as a siren, which showed it could work, but it also listed several similar labels at once (like “Police car,” “Siren,” and “Alarm”).
+2. Logger v1: My first logger saved every loud second, which split one siren into small pieces. When I made it wait longer before ending an event, it went too far and merged a siren, talking, and clapping into one event.
+3. Logger v2: I changed the logger so it starts a new event when the type of sound changes for two seconds in a row. After that, a siren, talking, and clapping were saved as three separate events with the right labels.
+4. Morning report v1: At first, Qwen wrote the whole report, but it made up times and mixed up facts. I changed the design so Python writes the facts, and Qwen only picks which event most likely woke the user from a numbered list.
+5. Screen and start: I added the Mini PiTFT for the bedtime message and the morning report. I also added a peace sign to start the night, and later added a button as a backup because the camera had trouble seeing my hand in the dark.
+6. Siren camera: I added a camera check for flashing red and blue lights, with a photo when it sees them. My first version picked the wrong photo, so I changed it to only count moments where red and blue appear close together.
+
+**Looks Like:**
+The device is a Raspberry Pi with a Mini PiTFT screen, a webcam, and a USB microphone. The microphone sits by the window pointing outside, so it hears the street. The webcam also faces the window. At bedtime, the screen says “Peace sign or press a button to start the night,” then “Listening. Goodnight.” After that, the screen turns off so it does not light up the room while the user sleeps. In the morning, the screen turns back on and shows the report, a siren photo if one was caught, and a chart of the night.
+
+
+**Works like:**
+
+The system follows the same pipeline as Part E, but with sound as the main sensor:
+
+1. Detector: The microphone records one second at a time. If the sound is louder than the normal background by at least 8 dB, YAMNet labels it.
+2. Interpreter: My code turns YAMNet’s labels into simple groups: siren, construction, voices, traffic, dog, music, inside, or other. It joins seconds of the same type into one event, and starts a new event when the type changes.
+3. Log: Each event is saved as one line with the time, type, length, and how loud it was. No audio is saved. If the camera sees flashing red and blue lights during an event, it also saves a photo.
+4. Reasoner: In the morning, Python reads the log and works out the facts, a timeline, and a chart. Qwen then picks which event most likely woke the user.
+
+**My real night (November 1 to 2):**
+
+I ran the system from about 12:43 AM to 8:39 AM, and it logged 271 loud events: 203 traffic, 26 voices, 15 siren, 12 other, 8 music, 6 inside, and 1 construction.
+
+<img width="3024" height="4032" alt="IMG_0758" src="https://github.com/user-attachments/assets/33847c2a-19c0-45c4-8d81-9d37eb312711" />
+
+<img width="1080" height="720" alt="noise_report" src="https://github.com/user-attachments/assets/4b9fe855-1af1-4942-afab-bd694d41d0fa" />
+
+<img width="3024" height="4032" alt="IMG_0759" src="https://github.com/user-attachments/assets/e467ac89-f569-4f30-8aac-35824bb8ff33" />
+
+
+
 
 \*\*\***Include a short video of the whole system**\*\*\*
 
-As always, make sure you document contributions and ideas from others (and AI) explicitly in your writeup.
 
-You are permitted (but not required) to work in groups and share a turn in; you are expected to make equal contribution on any group work you do, and N people's group project should look like N times the work of a single person's lab. Make sure the page for the group turn in is linked to your personal Interactive Lab Hub page.
 
 ## Deliverables & Submission for Lab 5
 
