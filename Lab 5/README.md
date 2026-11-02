@@ -417,6 +417,8 @@ The system follows the same pipeline as Part E, but with sound as the main senso
 
 I ran the system from about 12:43 AM to 8:39 AM, and it logged 271 loud events: 203 traffic, 26 voices, 15 siren, 12 other, 8 music, 6 inside, and 1 construction.
 
+<img width="3024" height="4032" alt="IMG_0765" src="https://github.com/user-attachments/assets/cf26d2d2-0db6-4656-b0df-b77bb7b151f0" />
+
 <img width="3024" height="4032" alt="IMG_0758" src="https://github.com/user-attachments/assets/33847c2a-19c0-45c4-8d81-9d37eb312711" />
 
 <img width="3024" height="4032" alt="IMG_0759" src="https://github.com/user-attachments/assets/e467ac89-f569-4f30-8aac-35824bb8ff33" />
@@ -427,12 +429,12 @@ I ran the system from about 12:43 AM to 8:39 AM, and it logged 271 loud events: 
 
 What the results show:
 
-*The night had three parts. From 12:43 to about 2:30 AM there were only a few events, but they were loud, mostly sirens. From about 2:30 to 5:00 AM the street was mostly quiet, with a few cars. Starting around 5 AM, traffic picked up quickly, and from 6 to 8:40 AM there was traffic almost every minute because of the morning rush. The 6 AM and 7 AM hours alone had over 150 events.
-*The loudest sound was a siren. The siren at 12:53 AM lasted 72 seconds and was 29.1 dB above the background, the loudest event of the night. It is the tallest red bar on the chart. This was right after I went to bed, so it is the sound most likely to have kept me up.
-*The quietest stretch was 2:23 AM to 3:24 AM, a full hour with no loud sounds at all.
+* The night had three parts. From 12:43 to about 2:30 AM there were only a few events, but they were loud, mostly sirens. From about 2:30 to 5:00 AM the street was mostly quiet, with a few cars. Starting around 5 AM, traffic picked up quickly, and from 6 to 8:40 AM there was traffic almost every minute because of the morning rush. The 6 AM and 7 AM hours alone had over 150 events.
+* The loudest sound was a siren. The siren at 12:53 AM lasted 72 seconds and was 29.1 dB above the background, the loudest event of the night. It is the tallest red bar on the chart. This was right after I went to bed, so it is the sound most likely to have kept me up.
+* The quietest stretch was 2:23 AM to 3:24 AM, a full hour with no loud sounds at all.
 Sirens came at all hours. There were sirens at 12:53, 1:40, 2:03, 2:23, and 6:15 AM, and several in a row around 8:01 and 8:30 AM.
-*Some sounds came from inside. The two “Door” events at 12:49 AM were me getting ready for bed after starting the device, which shows the tube helps but does not block inside sounds completely.
-*The morning pick was not perfect. Qwen picked a 96 second traffic event at 8:35 AM as what most likely woke me, but I was probably already awake by then.
+* Some sounds came from inside. The two “Door” events at 12:49 AM were me getting ready for bed after starting the device, which shows the tube helps but does not block inside sounds completely.
+* The morning pick was not perfect. Qwen picked a 96 second traffic event at 8:35 AM as what most likely woke me, but I was probably already awake by then.
 
 \*\*\***Include a short video of the whole system**\*\*\*
 
