@@ -449,7 +449,11 @@ What didn’t work as well:
 At bedtime, the user stands by the window and makes a peace sign at the camera, or presses a button on the screen. The screen says “Listening. Goodnight.” and then goes dark, so the user can go to sleep without thinking about it. In the morning, the user presses a button, and after a short wait, the screen shows a summary of the night. The user presses the button again to see which sound most likely woke them, a photo of a siren if one was caught, and a chart of the whole night. If nothing loud happened, the screen simply says “Quiet night.” Over many nights, this could help the user see patterns, like which hours are the loudest, and decide if earplugs or a fan would help.
 
 <img width="3024" height="4032" alt="IMG_0756 2" src="https://github.com/user-attachments/assets/2a196232-c895-40f3-8e68-ef27310e83e9" />
+
 ^Setup
+
+
+
 
 
 
