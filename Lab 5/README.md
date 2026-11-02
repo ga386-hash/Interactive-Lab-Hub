@@ -378,9 +378,11 @@ Fake a night first: run it for thirty seconds while you walk around, stop it, an
 
 
 The live lines from the logger:
+
 <img width="568" height="366" alt="Screenshot 2026-11-02 at 9 32 35 AM" src="https://github.com/user-attachments/assets/ae73c1f9-2f8f-4596-869d-0ccc8d82c0d5" />
 
 Setup:
+
 <img width="3024" height="4032" alt="IMG_0756" src="https://github.com/user-attachments/assets/36056089-7892-4333-b9dc-8689beebeb6e" />
 
 
