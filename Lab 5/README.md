@@ -436,7 +436,21 @@ Sirens came at all hours. There were sirens at 12:53, 1:40, 2:03, 2:23, and 6:15
 * Some sounds came from inside. The two “Door” events at 12:49 AM were me getting ready for bed after starting the device, which shows the tube helps but does not block inside sounds completely.
 * The morning pick was not perfect. Qwen picked a 96 second traffic event at 8:35 AM as what most likely woke me, but I was probably already awake by then.
 
-\*\*\***Include a short video of the whole system**\*\*\*
+
+What didn’t work as well:
+
+* One siren can be counted more than once. Around 8:01 AM and 8:30 AM, the log shows two or three siren events within a minute. These were most likely the same siren, split up when it faded in and out or mixed with traffic. So the 15 siren events were probably closer to 10 real sirens.
+* Some labels were wrong. YAMNet called some sounds “Fireworks,” “Train,” “Animal,” or “Tuning fork.” For example, at 8:35 AM a sound was grouped as a siren, but its top label was “Animal.”
+* Many events were small. A lot of traffic events were only 8 to 10 dB above the background, so the system counted almost every passing car. Raising the loudness line would give fewer, more important events.
+* The camera was off during the real night because of a setup mistake in my night script. After I fixed it, I tested it with a police lights video and it marked the event as having lights and saved a photo.
+
+**Acts like:**
+
+At bedtime, the user stands by the window and makes a peace sign at the camera, or presses a button on the screen. The screen says “Listening. Goodnight.” and then goes dark, so the user can go to sleep without thinking about it. In the morning, the user presses a button, and after a short wait, the screen shows a summary of the night. The user presses the button again to see which sound most likely woke them, a photo of a siren if one was caught, and a chart of the whole night. If nothing loud happened, the screen simply says “Quiet night.” Over many nights, this could help the user see patterns, like which hours are the loudest, and decide if earplugs or a fan would help.
+
+**Demo Video:**
+
+
 
 
 
