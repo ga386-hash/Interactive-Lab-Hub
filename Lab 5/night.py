@@ -19,12 +19,15 @@ def wait_release():
         time.sleep(0.05)
 
 def wait_for_peace(hold=1.5):
-    pitft.show_text(["Show a peace sign", "to start the night"], size=16)
+    pitft.show_text(["Peace sign or", "press a button", "to start the night"], size=16)
     cap = cv2.VideoCapture(0)
     hands = mp.solutions.hands.Hands(max_num_hands=1, min_detection_confidence=0.6)
     since, showing = None, False
     try:
         while True:
+            if pressed():
+                wait_release()
+                return
             ok, frame = cap.read()
             if not ok:
                 continue
@@ -44,7 +47,7 @@ def wait_for_peace(hold=1.5):
                     return
             else:
                 if showing:
-                    pitft.show_text(["Show a peace sign", "to start the night"], size=16)
+                    pitft.show_text(["Peace sign or", "press a button", "to start the night"], size=16)
                     showing = False
                 since = None
     finally:
