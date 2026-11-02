@@ -358,21 +358,14 @@ Final idea: Night Noise Detector is a device that sits by the window and listens
 ## Part G. 
 ### Design the interaction before
 
-The hand-off: the person tells the device what to watch tonight, and the device acknowledges it. Keep it to a thirty-second ritual. A button or a touch (Lab 4), a spoken sentence (Lab 3), a wave or a Quiet Coyote at the camera (Part C). The acknowledgement can be a line on the display, a tone, or an LED that dims rather than lights up. At its simplest, the hand-off just sets the question that the morning will answer.
+
 
 **Before going to sleep, the user stands by the window and holds up a peace sign to the camera. The PiTFT screen first says “Show a peace sign to start the night.” When the camera sees the peace sign for about a second and a half, the screen changes to “Listening. Goodnight.” and then turns off so it does not light up the room. This tells the user the device has started. The whole thing takes only a few seconds, so it is easy to do every night.**
 
 ## Part H. 
 ### Incorporate the observant system
 
-The Part E pipeline becomes the night shift. `overnight.py` runs your `interpret()` from `yolo_to_qwen.py` every few seconds, people only unless you pass `--all`, and writes the readings to `night_log.jsonl`; the reasoning waits for the morning. Start it inside `tmux` so it keeps running after you close your laptop, and stop it with Ctrl-C in the morning:
 
-```
-(.venv) pi@raspberrypi:~/Interactive-Lab-Hub/Lab 5 $ tmux new -s night
-(.venv) pi@raspberrypi:~/Interactive-Lab-Hub/Lab 5 $ python overnight.py
-```
-
-Fake a night first: run it for thirty seconds while you walk around, stop it, and run `morning.py` from Part I. When that looks right, run a real night. If your storyboard needs a sensor rather than the camera, swap in the Lab 4 example code and log its reading the same way.
 
 **Instead of overnight.py, I used my own script, noise_logger.py, because my project uses a microphone as the main sensor. It follows the same idea as the Part E pipeline: the microphone listens every second, YAMNet labels each loud sound, my code groups the labels into simple types (siren, construction, voices, traffic, dog, music, inside, other), and each event is saved as one line in a log. Like the lab suggests, I started it inside tmux so it kept running after I closed my laptop. I first tested it with short fake nights while playing a siren video, talking, and clapping, and then ran it for a real night from about 12:45 AM to 8:40 AM, which logged 271 loud events.**
 
@@ -389,13 +382,10 @@ Setup:
 ## Part I. 
 ### Design the interaction after
 
-The reveal. The night produced a log; the morning turns it into something a half-awake person can take in. `morning.py` is the smallest version: it asks Qwen for a three-sentence report.
+Instead of morning.py, I made my own script, noise_morning.py, and showed the report on the Mini PiTFT along with a timeline chart. In the morning, the user presses a button on the PiTFT. The device stops listening, builds the report, and shows it on the screen. The user presses the button to flip through the pages: a short summary of the night, which sound most likely woke them up, a siren photo if the camera caught flashing lights, and a chart of the whole night.
 
-```
-(.venv) pi@raspberrypi:~/Interactive-Lab-Hub/Lab 5 $ python morning.py
-```
+At first, I had Qwen write the full report, but it made up times and mixed up facts. For example, it said the quietest stretch lasted “120 seconds,” which was actually the length of a construction event. To fix this, I gave Qwen a much smaller job. Python works out the facts and writes the summary, and Qwen only picks which event most likely woke the user from a numbered list, using JSON. If Qwen gives a bad answer, the code uses the loudest event instead. To be honest about a night where nothing happened, the screen simply says “Quiet night. No loud events were logged.”
 
-Make it yours: show the report on the Mini PiTFT, read it aloud with Piper from Lab 3, plot the night as a timeline, or ask for JSON (`--json`, Part D) and move a servo. Whatever you pick, make sure it is honest about a night in which nothing happened.
 
 ## Final documentation
 
