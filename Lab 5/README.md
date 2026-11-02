@@ -483,5 +483,16 @@ After the night:
 https://drive.google.com/file/d/1h4qBoOSvxx9mU8kvZk8wbA7il4n0soQN/view?usp=sharing
 
 **Important Links:**
+My code:
+- [night.py](night.py): runs the whole night (start, listening, morning report)
+- [noise_logger.py](noise_logger.py): listens, labels sounds, and saves events to the log
+- [noise_morning.py](noise_morning.py): builds the morning report, timeline, and chart
+- [pitft.py](pitft.py): shows text and images on the Mini PiTFT
+- [yamnet_test.py](yamnet_test.py): my first test of the YAMNet sound model
 
-**Credits:**
+My results:
+- [Real night log (Nov 1 to 2)](night_log_2026-11-02.jsonl)
+- [Real night chart](night_chart_2026-11-02.png)
+- [Fake night log used for testing](fake_night.jsonl)
+
+**Credits:** I used Claude as a helper during this lab. It helped me expand on my project ideas, like suggesting YAMNet for labeling sounds and adding the camera check for flashing siren lights. It also helped me write parts of the code, including the noise logger and the PiTFT screen setup, and helped me debug problems along the way, such as events getting merged together and Qwen making up facts in the morning report. Jonathan Sharpy gave me feedback.
