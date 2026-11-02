@@ -450,8 +450,11 @@ At bedtime, the user stands by the window and makes a peace sign at the camera, 
 
 **Demo Video:**
 
+Before/During the night:
+https://drive.google.com/file/d/1lv1RMxCFARUE2WRE94eQ6-NGYdAhX3Yw/view?usp=sharing
 
-
+After the night:
+https://drive.google.com/file/d/1h4qBoOSvxx9mU8kvZk8wbA7il4n0soQN/view?usp=sharing
 
 
 ## Deliverables & Submission for Lab 5
