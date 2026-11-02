@@ -482,19 +482,6 @@ https://drive.google.com/file/d/1lv1RMxCFARUE2WRE94eQ6-NGYdAhX3Yw/view?usp=shari
 After the night:
 https://drive.google.com/file/d/1h4qBoOSvxx9mU8kvZk8wbA7il4n0soQN/view?usp=sharing
 
+**Important Links:**
 
-## Deliverables & Submission for Lab 5
-
-For submission, the readme.md page for this lab should be edited to include the work you have done:
-* Upload any materials that explain what you did, including your code and night log, into your Lab 5 repository, and link them in your Lab 5 readme.md.
-* Labs are due on Sundays, make sure to submit your Lab 5 readme.md to Canvas.
-
-<details>
-  <summary><strong>Submission Cleanup Reminder (Click to Expand)</strong></summary>
-
-  **Before submitting your README.md:**
-  - This readme.md file has a lot of extra text for guidance.
-  - Remove all instructional text and example prompts from this file.
-  - You may either delete these sections or use the toggle/hide feature in VS Code to collapse them for a cleaner look.
-  - Your final submission should be neat, focused on your own work, and easy to read for grading.
-</details>
+**Credits:**
