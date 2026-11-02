@@ -374,7 +374,15 @@ The Part E pipeline becomes the night shift. `overnight.py` runs your `interpret
 
 Fake a night first: run it for thirty seconds while you walk around, stop it, and run `morning.py` from Part I. When that looks right, run a real night. If your storyboard needs a sensor rather than the camera, swap in the Lab 4 example code and log its reading the same way.
 
-\*\*\***Screenshots or videos of the running system.**\*\*\*
+**Instead of overnight.py, I used my own script, noise_logger.py, because my project uses a microphone as the main sensor. It follows the same idea as the Part E pipeline: the microphone listens every second, YAMNet labels each loud sound, my code groups the labels into simple types (siren, construction, voices, traffic, dog, music, inside, other), and each event is saved as one line in a log. Like the lab suggests, I started it inside tmux so it kept running after I closed my laptop. I first tested it with short fake nights while playing a siren video, talking, and clapping, and then ran it for a real night from about 12:45 AM to 8:40 AM, which logged 271 loud events.**
+
+
+The live lines from the logger:
+<img width="568" height="366" alt="Screenshot 2026-11-02 at 9 32 35 AM" src="https://github.com/user-attachments/assets/ae73c1f9-2f8f-4596-869d-0ccc8d82c0d5" />
+
+Setup:
+<img width="3024" height="4032" alt="IMG_0756" src="https://github.com/user-attachments/assets/36056089-7892-4333-b9dc-8689beebeb6e" />
+
 
 ## Part I. 
 ### Design the interaction after
