@@ -69,7 +69,7 @@ mosquitto_pub -h farlab.infosci.cornell.edu -p 1883 -t 'IDD/test/yourname' -m 'H
 4. Study focus check: A Pi at each desk publishes motion. If one person has been away for a while but their friends are still working, their Pi sends a nudge to come back.
 
 5. Apartment doorbell: A button Pi at the front door publishes "ring." Every other Pi in the apartment flashes its screen or plays a sound, so you hear it from any room.
-6. 
+   
 ---
 
 ## Part B: Collaborative Pixel Grid
