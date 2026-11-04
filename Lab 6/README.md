@@ -60,8 +60,16 @@ mosquitto_pub -h farlab.infosci.cornell.edu -p 1883 -t 'IDD/test/yourname' -m 'H
 
 **💡 Brainstorm 5 ideas for messaging between devices**
 
-MQTT agrees on almost nothing in advance: you invent the topics and what the messages mean. Smart-home standards like Matter fix the vocabulary instead (every "light" behaves the same). Keep this trade-off in mind when you design your topics in Part C.
+1. Roommate presence board: Each room has a Pi with a proximity sensor that publishes when someone is there. A display by the door shows which rooms are in use.
 
+2. Laundry done alert: A Pi on the washing machine senses vibration. When the shaking stops, it publishes "done" and a Pi in your room beeps.
+
+3. Shared mood lamp: Each friend picks a color on their Pi. Every Pi subscribes to the others and shows a mix of everyone's colors, so you can see how the group is feeling.
+
+4. Study focus check: A Pi at each desk publishes motion. If one person has been away for a while but their friends are still working, their Pi sends a nudge to come back.
+
+5. Apartment doorbell: A button Pi at the front door publishes "ring." Every other Pi in the apartment flashes its screen or plays a sound, so you hear it from any room.
+6. 
 ---
 
 ## Part B: Collaborative Pixel Grid
