@@ -31,21 +31,24 @@
 
 ## Part C: Make Your Own
 
-**Requirements:**
-- 3+ people, 3+ Pis
-- Each Pi contributes sensor input via MQTT
-- Meaningful or fun interaction
-
 ### Deliverables
 
 Replace this README with your documentation:
 
 **1. Project Description**
-- What does it do? Why interesting? User experience?
+
+NEON RACE is a reaction game for 3 Raspberry Pis. Every round, all three screens show the same task at the same time, like SHOW RED or HAND CLOSE (or PEACE SIGN and THUMBS UP when a webcam is attached). The first player to do the task with their sensor wins the round. After 5 rounds, the player with the most wins is the champion.
+
+It is interesting because the game only works when all three devices stay in sync over the network. Each Pi senses its own player, but one Pi has to decide the winner fairly. For the user, it feels like a fast arcade game: a countdown, a task, a race, and a scoreboard on every screen.
+
+To keep it fair, players must release first and then hold the task for a short moment. This stops someone from winning by just leaving their hand over the sensor before the round starts.
 
 **2. Architecture Diagram**
-- Hardware, connections, data flow
-- Label input/computation/output
+<img width="656" height="425" alt="Screenshot 2026-11-08 at 3 16 09 PM" src="https://github.com/user-attachments/assets/9428b8c9-81f8-48ea-804c-cfdf0fffebf6" />
+
+* Input: APDS-9960 on each Pi (color and proximity), optional USB webcam (hand gestures)
+* Computation: each Pi checks its own sensor and times its own reaction; the host Pi picks tasks, collects times, and keeps score
+* Output: Mini PiTFT screen on every Pi shows the task, countdown, and scoreboard
 
 **3. Build Documentation**
 - Photos of each Pi + sensors
