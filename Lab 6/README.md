@@ -51,10 +51,17 @@ To keep it fair, players must release first and then hold the task for a short m
 * Output: Mini PiTFT screen on every Pi shows the task, countdown, and scoreboard
 
 **3. Build Documentation**
+
 Photos of each Pi + sensors:
-<img width="4284" height="5712" alt="IMG_0789" src="https://github.com/user-attachments/assets/e5ecd588-a4b9-4894-96a4-8464078b2793" />
-<img width="361" height="346" alt="Screenshot 2026-11-08 at 3 21 26 PM" src="https://github.com/user-<img width="298" height="234" alt="Screenshot 2026-11-08 at 3 23 15 PM" src="https://github.com/user-attachments/assets/d988d2ff-b6f6-4a00-9985-f03b5e060219" />
-attachments/assets/4bde4580-d127-4793-a6fb-8c9f79864610" /><img width="181" height="165" alt="Screenshot 2026-11-08 at 3 22 55 PM" src="https://github.com/user-attachments/assets/5cf10534-365e-4a34-9114-b56621a651f8" />
+
+<img width="4284" height="5712" alt="IMG_0789" src="https://github.com/user-attachments/assets/0a9e27e1-8281-4c84-9258-ff365fd69e19" />
+
+<img width="361" height="346" alt="Screenshot 2026-11-08 at 3 21 26 PM" src="https://github.com/user-attachments/assets/74d45ce4-119a-4181-b91b-909e34b61898" />
+
+<img width="298" height="234" alt="Screenshot 2026-11-08 at 3 23 15 PM" src="https://github.com/user-attachments/assets/70f3a12e-4006-4c0c-b6ba-91f52862506f" />
+
+<img width="181" height="165" alt="Screenshot 2026-11-08 at 3 22 55 PM" src="https://github.com/user-attachments/assets/9e622096-bf02-47c5-88b0-43fb77eb6de5" />
+
 
 To run the game, the host Pi starts with `python neon_race.py --host --name pi1`, and the other two Pis run `python neon_race.py --name pi2` and `python neon_race.py --name pi3`. A Pi without a webcam adds `--no-camera`. The host presses the top button on its screen to start the match. If some Pis do not have a webcam, the game automatically only uses tasks that every Pi can do, which are the color tasks and HAND CLOSE.
 
