@@ -115,74 +115,20 @@ The best moment was when all three Pis showed GO and then the winner at the same
 
 When we asked what they would change, they wanted clearer instructions at the start, especially about the release rule and how close to hold the object. They also wanted to see everyone’s reaction time after each round, not just the winner’s. They also suggested sound effects for GO, wins, and the final champion, since the Mini PiTFT is small and hard to watch from a distance.
 
-## Reflection
-
-The project showed us that MQTT makes it easy to get several devices working together, but the hard part is making the interaction clear to people. Our rules made sense to us, like the release rule and the hold time, but new players did not know about them, so they thought the system was broken. The sensor also worked well in our setup but needed objects held close and colors that clearly stood out, which users did not expect. If we did this again, we would add instructions on screen, show all players' reaction times, and add sound.
-
-**Where computation happened:** Each Pi read its own color sensor and decided locally when a player had completed the task. It then published that result with a timestamp over MQTT. [The host Pi / server] collected the results, picked the winner (two players within 0.08 seconds counted as a tie), and published the result back so all screens updated together. We did not use a language model, so no model ran per event or at setup. All the game logic was plain code, which kept it fast enough for a reaction game.
 
 **5. Reflection**
-- What worked well?
-- Challenges with distributed interaction?
-- How did sensor events work?
-- What would you improve?
-- Where did computation happen in your system, and why there? (If you used a language model: did it run on every event, or only at setup?)
 
----
+What worked well was the moment all three Pis reacted together. When GO appeared and then the winner showed up on every screen at once, the game felt connected, and it was the part testers enjoyed most. MQTT made this easy since every Pi just subscribed to the same topics.
 
-**Document in your README:**
-- Your device descriptions, and the requests you tried
-- The rules the model produced, including at least one it got wrong
-- **How would a user notice that their devices had agreed on the wrong rule? How would they fix it?**
+The main challenge with distributed interaction was making the rules clear across separate devices. Rules that made sense to us, like the release rule and the hold time, confused new players. Timing was also a challenge, since we had to decide what counts as a tie when two players finish almost at once, which is why we used a 0.08 second window.
 
----
+For sensor events, each Pi read its own APDS-9960 color sensor and checked whether the correct color was held close enough and long enough. A quick flash did not count, and if a player was already holding a color when GO appeared, they had to pull away first. Once a task was completed, the Pi published a message with a timestamp over MQTT.
 
-## Code Files
+To improve the game, we would add on-screen instructions at the start, show everyone’s reaction time after each round instead of just the winner, and add sound effects since the Mini PiTFT is small and hard to watch.
 
-**Server files:**
-- `app.py` - Pixel grid server (Flask + WebSocket + MQTT)
-- `mqtt_viewer.py` - MQTT message viewer for debugging
-- `mqtt_bridge.py` - MQTT → WebSocket bridge
-- `requirements-server.txt` - Server dependencies
-
-**Pi files:**
-- `pixel_grid_publisher.py` - Example (RGB sensor → MQTT)
-- `requirements-pi.txt` - Pi dependencies
-
-**Web interface:**
-- `templates/grid.html` - Pixel grid display
-- `templates/controller.html` - Color picker
-- `templates/mqtt_viewer.html` - Message viewer
-
----
-
-## Debugging Tools
-
-**MQTT Message Viewer:** `http://farlab.infosci.cornell.edu:5001`
-- See all MQTT messages in real-time
-- View topics and payloads
-- Helpful for debugging your own projects
-
-**Command line:**
-```bash
-# See all IDD messages
-mosquitto_sub -h farlab.infosci.cornell.edu -p 1883 -t "IDD/#" -u idd -P "device@theFarm"
-```
-
----
-
-## Troubleshooting
-
-**MQTT:** Broker `farlab.infosci.cornell.edu:1883`, user `idd`, pass `device@theFarm`
-
-**Sensor:** Check `i2cdetect -y 1`, APDS-9960 at `0x39`
-
-**Grid:** Verify server running, check MQTT in console, test with web controller
-
-**Pi venv:** Make sure to activate: `source .venv/bin/activate`
+Computation happened in two places. Each Pi handled its own sensor reading and color detection locally, so it could react quickly and only send a small message when something happened instead of streaming raw sensor data. [The host Pi / server] collected the results and picked the winner, so there was one source of truth and every screen showed the same result. We did not use a language model, so nothing ran per event or at setup. 
 
 
----
 
 ## Submission Checklist
 
