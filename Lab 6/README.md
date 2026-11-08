@@ -1,6 +1,6 @@
 # Distributed Interaction
 
-**NAMES OF COLLABORATORS HERE**
+**NAMES OF COLLABORATORS HERE: Gal Alon, Stephen Monahan, Jonathan Sharpy**
 
 For submission, replace this section with your documentation!
 
