@@ -51,9 +51,46 @@ To keep it fair, players must release first and then hold the task for a short m
 * Output: Mini PiTFT screen on every Pi shows the task, countdown, and scoreboard
 
 **3. Build Documentation**
-- Photos of each Pi + sensors
-- MQTT topics used
-- Code snippets with explanations
+Photos of each Pi + sensors:
+<img width="4284" height="5712" alt="IMG_0789" src="https://github.com/user-attachments/assets/e5ecd588-a4b9-4894-96a4-8464078b2793" />
+<img width="361" height="346" alt="Screenshot 2026-11-08 at 3 21 26 PM" src="https://github.com/user-<img width="298" height="234" alt="Screenshot 2026-11-08 at 3 23 15 PM" src="https://github.com/user-attachments/assets/d988d2ff-b6f6-4a00-9985-f03b5e060219" />
+attachments/assets/4bde4580-d127-4793-a6fb-8c9f79864610" /><img width="181" height="165" alt="Screenshot 2026-11-08 at 3 22 55 PM" src="https://github.com/user-attachments/assets/5cf10534-365e-4a34-9114-b56621a651f8" />
+
+To run the game, the host Pi starts with `python neon_race.py --host --name pi1`, and the other two Pis run `python neon_race.py --name pi2` and `python neon_race.py --name pi3`. A Pi without a webcam adds `--no-camera`. The host presses the top button on its screen to start the match. If some Pis do not have a webcam, the game automatically only uses tasks that every Pi can do, which are the color tasks and HAND CLOSE.
+
+All of our MQTT topics live under `IDD/stephen-neon/race/`. Every Pi publishes to `hello` every few seconds to say it is online and which tasks its sensors can handle. The host publishes the next round's task on `prepare`, and each Pi answers on `ready` once its sensors are ready. When every Pi is ready, the host publishes `go` to start the countdown. When a player finishes, their Pi publishes to `done` with how long it took. The host then publishes the round winner and scores on `result`, and uses `state` for lobby updates, the scoreboard, and the final champion. Each Pi also publishes live sensor readings on `sensor/<name>`, which was helpful for debugging.
+
+The first important piece of code turns raw RGB values from the sensor into "red," "green," or "blue." It only counts a color if one channel is clearly stronger than the others, so white light or mixed colors are ignored instead of being guessed.
+
+```python
+peak = max(values)
+if peak < ordered[1] * 1.35 or peak / max(sum(values), 1) < .43:
+    return None
+return ("red", "green", "blue")[values.index(peak)]
+```
+
+The second piece is the release first, then hold rule. A player first has to not match the task, which arms them. Then they have to match the task and hold it for 0.35 seconds before their Pi sends a finish message with their time.
+
+```python
+if not matches:
+    self.armed = True
+    ...
+if not self.armed:
+    self.note = "Release first, then do it!"
+    return
+self.progress = (stamp - self.hold_since) / 0.35
+if self.progress >= 1.0:
+    elapsed = now - self.go_at
+    self.send("done", self.packet(task=self.task, elapsed=round(elapsed, 4)))
+```
+
+The third piece is how the host picks the winner. Each Pi measures how long it took on its own clock and sends that number, instead of the host judging by which message arrived first. The host compares the times, and anyone within 0.08 seconds of the best time counts as a tie, since differences that small are too close to call with the sensors we used.
+
+```python
+best = min(self.answers.values())
+self.winners = sorted(p for p, elapsed in self.answers.items()
+                      if elapsed - best <= 0.08000001)
+```
 
 **4. User Testing**
 - **Test with 2+ people NOT on your team**
