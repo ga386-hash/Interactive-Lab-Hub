@@ -106,9 +106,20 @@ self.winners = sorted(p for p, elapsed in self.answers.items()
 **4. User Testing**
 - **Test with 2+ people NOT on your team**
 - Photos/video of use
-- What did they think before trying?
-- What surprised them?
-- What would they change?
+
+The biggest surprise was the release rule. If a player was already holding a color when GO appeared, nothing happened until they pulled away and came back. Both testers thought the game was broken the first time this happened.
+
+They also had trouble with the sensor at first. They held objects too far away, since it only works within a few cm. Some colors like pink, orange, and white were ignored because no single color clearly won. A phone screen showing a solid color worked much better than a notebook.
+
+The best moment was when all three Pis showed GO and then the winner at the same time. Seeing three separate devices react together made the game feel connected.
+
+When we asked what they would change, they wanted clearer instructions at the start, especially about the release rule and how close to hold the object. They also wanted to see everyone’s reaction time after each round, not just the winner’s. They also suggested sound effects for GO, wins, and the final champion, since the Mini PiTFT is small and hard to watch from a distance.
+
+## Reflection
+
+The project showed us that MQTT makes it easy to get several devices working together, but the hard part is making the interaction clear to people. Our rules made sense to us, like the release rule and the hold time, but new players did not know about them, so they thought the system was broken. The sensor also worked well in our setup but needed objects held close and colors that clearly stood out, which users did not expect. If we did this again, we would add instructions on screen, show all players' reaction times, and add sound.
+
+**Where computation happened:** Each Pi read its own color sensor and decided locally when a player had completed the task. It then published that result with a timestamp over MQTT. [The host Pi / server] collected the results, picked the winner (two players within 0.08 seconds counted as a tie), and published the result back so all screens updated together. We did not use a language model, so no model ran per event or at setup. All the game logic was plain code, which kept it fast enough for a reaction game.
 
 **5. Reflection**
 - What worked well?
