@@ -128,20 +128,9 @@ To improve the game, we would add on-screen instructions at the start, show ever
 
 Computation happened in two places. Each Pi handled its own sensor reading and color detection locally, so it could react quickly and only send a small message when something happened instead of streaming raw sensor data. [The host Pi / server] collected the results and picked the winner, so there was one source of truth and every screen showed the same result. We did not use a language model, so nothing ran per event or at setup. 
 
-
+**Final Video of Neon Race:** https://drive.google.com/file/d/1hGqOS-wmcjMtV6QPC1937JpnXOPRor-4/view?usp=sharing
 
 ## Submission Checklist
 
 Before submitting:
-- [ ] Delete prep/instructions above
-- [ ] Add YOUR project documentation
-- [ ] Include photos/videos/diagrams  
 - [ ] Document user testing with non-team members
-- [ ] Add reflection on learnings
-- [ ] List team names at top
-
-**Your README = story of what YOU built!**
-
----
-
-Resources: [MQTT Guide](https://www.hivemq.com/mqtt-essentials/) | [Paho Python](https://www.eclipse.org/paho/index.php?page=clients/python/docs/index.php) | [Flask-SocketIO](https://flask-socketio.readthedocs.io/)
