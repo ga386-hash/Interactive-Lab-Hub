@@ -1,14 +1,11 @@
 #!/usr/bin/env python3
-"""NEON RACE - Lab 6 distributed reaction game.
+"""
 
 Run on the course 240x135 Mini PiTFT, APDS-9960 and optional USB webcam.
 Host: python neon_race.py --host --name pi1
 Others: python neon_race.py --name pi2  (and --name pi3)
 Solo hardware test: python neon_race.py --practice
-Read NEON_RACE.md for setup, MQTT protocol, and remaining lab documentation.
 
-Created with Stephen and Codex. Uses the course screen wiring and MQTT broker,
-Adafruit drivers, Pillow, Paho MQTT, and Google's MediaPipe Gesture Recognizer.
 """
 """Pure state machine for NEON RACE. No network or hardware access."""
 import math
