@@ -132,7 +132,4 @@ Computation happened in two places. Each Pi handled its own sensor reading and c
 
 **Final Video of Neon Race:** https://drive.google.com/file/d/1hGqOS-wmcjMtV6QPC1937JpnXOPRor-4/view?usp=sharing
 
-## Submission Checklist
 
-Before submitting:
-- [ ] Document user testing with non-team members
