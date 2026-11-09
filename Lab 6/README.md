@@ -44,6 +44,8 @@ It is interesting because the game only works when all three devices stay in syn
 To keep it fair, players must release first and then hold the task for a short moment. This stops someone from winning by just leaving their hand over the sensor before the round starts.
 
 **2. Architecture Diagram**
+
+
 <img width="656" height="425" alt="Screenshot 2026-11-08 at 3 16 09 PM" src="https://github.com/user-attachments/assets/9428b8c9-81f8-48ea-804c-cfdf0fffebf6" />
 
 * Input: APDS-9960 on each Pi (color and proximity), optional USB webcam (hand gestures)
@@ -104,8 +106,8 @@ self.winners = sorted(p for p, elapsed in self.answers.items()
 ```
 
 **4. User Testing**
-- **Test with 2+ people NOT on your team**
-- Photos/video of use
+
+Our next step was testing the neon race with two different teams. We gave them a short explanation and let them play a few rounds.
 
 The biggest surprise was the release rule. If a player was already holding a color when GO appeared, nothing happened until they pulled away and came back. Both testers thought the game was broken the first time this happened.
 
